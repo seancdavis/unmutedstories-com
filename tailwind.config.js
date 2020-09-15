@@ -8,28 +8,17 @@ module.exports = {
     extend: {
       colors: {
         black: "var(--color-black)",
-        blue: {
-          default: "var(--color-blue)",
-          dark: "var(--color-blue-dark)"
-        },
-        gray: {
-          blue: "var(--color-gray-blue)",
-          dark: "var(--color-gray-dark)",
-          default: "var(--color-gray)",
-          light: "var(--color-gray-light)"
-        },
-        green: {
-          default: "var(--color-green)"
-        },
-        lime: "var(--color-lime)",
+        blue: "var(--color-blue)",
+        gray: "var(--color-gray)",
         orange: "var(--color-orange)",
-        pink: "var(--color-pink)",
+        red: "var(--color-red)",
         white: "var(--color-white)",
         yellow: "var(--color-yellow)"
       }
     },
     fontFamily: {
-      default: ["Source Sans Pro", "sans-serif"]
+      default: ["Source Sans Pro", "sans-serif"],
+      headings: ["Playfair Display", "serif"]
     }
   },
   variants: {},

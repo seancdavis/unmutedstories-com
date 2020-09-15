@@ -1,12 +1,12 @@
 {
-  "base_url": "https://twenty-ninety.netlify.app",
-  "description": "A component-based Eleventy starter kit.",
+  "base_url": "https://unmutedstories-com.netlify.app",
+  "description": "Everyone has a story. Unmute yours.",
   "image": "/default-meta.png",
   "og": {
     "type": "website"
   },
-  "title_template": "%s | Twenty Ninety",
-  "title": "Twenty Ninety",
+  "title_template": "%s | Unmute",
+  "title": "Unmute",
   "twitter": {
     "card": "summary_large_image"
   }
