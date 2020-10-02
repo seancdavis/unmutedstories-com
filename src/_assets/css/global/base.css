@@ -45,3 +45,12 @@ img,
 svg {
   @apply max-w-full;
 }
+
+input[type="submit"] {
+  transition: 0.35s background-color ease;
+
+  &:hover {
+    background-color: var(--color-yellow-dark);
+    cursor: pointer;
+  }
+}

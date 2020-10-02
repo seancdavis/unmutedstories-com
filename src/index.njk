@@ -6,22 +6,32 @@ seo:
   description: Everyone has a story. Unmute yours.
 ---
 
-<div class="bg-orange text-center text-white flex items-center justify-center" style="height: 100vh;">
-  <div class="w-full px-4 sm:px-0">
-    <div class="w-48 sm:w-64 mx-auto mb-2 sm:mb-4">
-      {% svg "unmute-logo" %}
+<div class="bg-black text-white" style="background-image: url(https://images.unsplash.com/photo-1513517178-1aca306e52a9?auto=format&w=800); background-size: 400px; background-position: calc(100vw - 500px) center; background-repeat: no-repeat;">
+  <div class="container pt-8 pb-16">
+    <div class="flex items-center mb-12">
+      <span class="inline-block w-32 mr-8">
+        {% svg "unmute-logo" %}
+      </span>
+      <span class="inline-block max-w-xs text-sm">
+        An event-driven community for underrepresented folx to share, listen, and learn.
+      </span>
     </div>
-    <p class="text-yellow font-bold text-xl mb-8 sm:mb-12">Launching in 2020, the weirdest year ever.</p>
-
-    <form action="https://unmutedstories.us2.list-manage.com/subscribe/post?u=767664b8a76e41fe139147a10&amp;id=e3cfdf64de" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate class="inline-block">
-      <div class="sm:flex items-center">
-        <p class="sm:inline-block mr-3 mb-2 sm:mb-0">Join the discussion</p>
-        <input type="email" value="" name="EMAIL" class="rounded-full h-12 px-4 py-2 inline-block mr-3 w-56 text-black" placeholder="enter your email" required>
-        <div class="absolute" style="left: -5000px;" aria-hidden="true">
-          <input type="text" name="b_767664b8a76e41fe139147a10_e3cfdf64de" tabindex="-1" value="">
-        </div>
-        <input type="submit" value="&nbsp;" name="subscribe" class="rounded-full bg-yellow p-4 leading-none h-12 w-12 bg-center bg-no-repeat" style="background-image: url('/assets/images/form-submit-arrow.png'); background-size: 1.3rem;">
-      </div>
-    </form>
+    <div class="font-bold text-sm mb-6">
+      <span class="inline-block mr-6">October 1, 2020</span>
+      <span class="inline-block mr-6">7 PM EST</span>
+      <span class="inline-block">Virtual</span>
+    </div>
+    <h1 class="text-5xl leading-tight mb-6">Everyone has a story.<br>
+      <span class="underline">Unmute</span> yours.</h1>
+    <p class="max-w-md mb-8">
+      Join us for an evening of storytelling with some of your favorite fellow nerds. We'll laugh, we'll cry. We may even hear a story without any industry jargon!
+    </p>
+    <div class="flex items-center">
+      {% component "button",
+      label = "Register now",
+      url = "/",
+      className = "mr-4" %}
+      <span class="inline-block text-xs">A statement about why they should register for FREE.</span>
+    </div>
   </div>
 </div>

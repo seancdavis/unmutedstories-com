@@ -13,7 +13,10 @@ module.exports = {
         orange: "var(--color-orange)",
         red: "var(--color-red)",
         white: "var(--color-white)",
-        yellow: "var(--color-yellow)"
+        yellow: {
+          default: "var(--color-yellow)",
+          dark: "var(--color-yellow-dark)"
+        }
       }
     },
     fontFamily: {
