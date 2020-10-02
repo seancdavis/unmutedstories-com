@@ -6,6 +6,8 @@ seo:
   description: Everyone has a story. Unmute yours.
 ---
 
+{# --- Jumbotron --- #}
+
 <div class="bg-black text-white" style="background-image: url(https://images.unsplash.com/photo-1513517178-1aca306e52a9?auto=format&w=800); background-size: 400px; background-position: calc(100vw - 500px) center; background-repeat: no-repeat;">
   <div class="container pt-8 pb-16">
     <div class="flex items-center mb-12">
@@ -32,6 +34,25 @@ seo:
       url = "/",
       className = "mr-4" %}
       <span class="inline-block text-xs">A statement about why they should register for FREE.</span>
+    </div>
+  </div>
+</div>
+
+{# --- Lineup --- #}
+
+<div class="py-16">
+  <div class="container text-center">
+    <h2 class="text-4xl mb-4">The Lineup</h2>
+    <p class="max-w-lg mx-auto mb-8">
+      We believe we can make the tech space a better place by providing and open and raw storytelling platform. A place to slow down. To take time to listen to each other's stories.
+    </p>
+    <div class="">
+      {% component "card",
+      className = "mx-4" %}
+      {% component "card",
+      className = "mx-4" %}
+      {% component "card",
+      className = "mx-4" %}
     </div>
   </div>
 </div>
