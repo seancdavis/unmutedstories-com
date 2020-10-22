@@ -29,10 +29,7 @@ seo:
       Join us for an evening of storytelling with some of your favorite fellow nerds. We'll laugh, we'll cry. We may even hear a story without any industry jargon!
     </p>
     <div class="flex items-center">
-      {% component "button",
-      label = "Register now",
-      url = "/",
-      className = "mr-4" %}
+      {% button label = "Register now", url = "/", className = "mr-4" %}
       <span class="inline-block text-xs">A statement about why they should register for FREE.</span>
     </div>
   </div>
@@ -47,12 +44,35 @@ seo:
       We believe we can make the tech space a better place by providing and open and raw storytelling platform. A place to slow down. To take time to listen to each other's stories.
     </p>
     <div class="">
-      {% component "card",
-      className = "mx-4" %}
-      {% component "card",
-      className = "mx-4" %}
-      {% component "card",
-      className = "mx-4" %}
+      {% card className = "mx-4" %}
+      {% card className = "mx-4" %}
+      {% card className = "mx-4" %}
     </div>
   </div>
 </div>
+
+{# --- FAQ --- #}
+
+<div class="py-16 bg-gray-light">
+  <div class="container text-center">
+    <h2 class="text-4xl mb-4">Frequently Anticipated Questions</h2>
+    <p class="max-w-lg mx-auto mb-8">
+      Proin vehicula tellus in nisl imperdiet, vel varius ligula placerat. Aenean mollis mi at cursus ornare. Sed nec enim erat.
+    </p>
+  </div>
+
+  {% text_tile heading = "UnMute is made by you, for you." %}
+    <p>
+      We believe we can make the tech space a better place by providing an open
+      and raw storytelling platform. A place to slow down. To take time to
+      listen to the stories that surround us. And to use those stories to better
+      ourselves — our selfs, our careers, and our environments — along with the
+      industry in which we work.
+    </p>
+    <p>
+      <a href="/code-of-conduct">See our Code of Conduct</a>
+    </p>
+  {% endtext_tile %}
+</div>
+
+{# --- Footer --- #}

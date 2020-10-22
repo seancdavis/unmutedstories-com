@@ -58,6 +58,28 @@ exports.Component = class Component {
     this.transform()
     return nunjucks.renderString(this.template, this.props)
   }
+
+  /**
+   * Whether or not the component should have paired tags or a single tag.
+   */
+  isPaired() {
+    return this.template.includes("{{ children")
+  }
+}
+
+/**
+ * Sets the props for a component and then renders the component.
+ *
+ * @param {object} component A component object (from class above).
+ * @param {object} props The properties to set on the component.
+ */
+const renderComponent = (component, props) => {
+  try {
+    component.props = props
+    return component.render()
+  } catch (error) {
+    throw console.error(`ERROR: `, error)
+  }
 }
 
 /**
@@ -66,12 +88,29 @@ exports.Component = class Component {
  * @param {object} eleventyConfig Eleventy's configuration object
  */
 exports.default = (eleventyConfig) => {
-  eleventyConfig.addNunjucksShortcode("component", (name, props) => {
-    try {
-      const component = new this.Component(name, props)
-      return component.render()
-    } catch (error) {
-      throw console.error(`ERROR: `, error)
+  // Grab all the directories in the components dir. Note that this only grabs
+  // top-level comps at this time.
+  let components = glob.sync(path.join(getComponentsDir(config), "*"))
+  // Loop through each ...
+  components = components.map((compDir) => {
+    // Extract the name of the directory, which is expected to match the name of
+    // the component and its interior files.
+    const name = path.basename(compDir)
+    // Instantiate the component object.
+    const component = new this.Component(name, {})
+    // Swap hyphens for underscores in shortcode name.
+    const shortcodeName = name.replace(/\-/gi, "_")
+    // If the component is paired ...
+    if (component.isPaired()) {
+      // ... Render the component, setting the children prop appropriately.
+      eleventyConfig.addPairedNunjucksShortcode(shortcodeName, (children, props) => {
+        return renderComponent(component, { ...props, children: children })
+      })
+    } else {
+      // Otherwise, render an unpaired component and pass the props directly.
+      eleventyConfig.addNunjucksShortcode(shortcodeName, (props) => {
+        return renderComponent(component, props)
+      })
     }
   })
 }

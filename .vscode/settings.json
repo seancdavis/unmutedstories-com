@@ -5,8 +5,8 @@
   },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
-  "cSpell.words": [
-    "Playfair",
-    "hljs"
-  ]
+  "cSpell.words": ["Playfair", "hljs"],
+  "[nunjucks]": {
+    "editor.formatOnSave": false
+  }
 }
