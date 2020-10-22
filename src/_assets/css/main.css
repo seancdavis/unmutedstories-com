@@ -1,5 +1,6 @@
 @import "./global/variables.css";
 @import "./global/fonts.css";
+@import "./global/images.css";
 
 @import "./tailwind/base";
 
