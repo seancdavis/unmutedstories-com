@@ -1,7 +1,6 @@
 import "./utils/scan-links"
+import TextTileSlider from "./utils/text-tile-slider"
 
 import "./lib/analytics"
 
-// console.log("Running Twenty-Ninety Starter ...")
-
-export default {}
+export { TextTileSlider }

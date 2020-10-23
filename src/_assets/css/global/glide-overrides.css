@@ -1,0 +1,30 @@
+.glide__track {
+  &:after,
+  &:before {
+    content: " ";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 3rem;
+    z-index: 1;
+  }
+
+  &:before {
+    background: linear-gradient(to left, transparent, var(--color-gray-light));
+    left: 0;
+  }
+
+  &:after {
+    background: linear-gradient(to right, transparent, var(--color-gray-light));
+    right: 0;
+  }
+}
+
+.glide__controls {
+  position: relative;
+  z-index: 2;
+}
+
+.glide__slide {
+  height: inherit;
+}

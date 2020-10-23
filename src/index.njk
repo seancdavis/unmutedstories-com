@@ -53,6 +53,19 @@ seo:
 
 {# --- FAQ --- #}
 
+{% text_tile heading = "UnMute is made by you, for you." %}
+  <p>
+    We believe we can make the tech space a better place by providing an open
+    and raw storytelling platform. A place to slow down. To take time to
+    listen to the stories that surround us. And to use those stories to better
+    ourselves — our selfs, our careers, and our environments — along with the
+    industry in which we work.
+  </p>
+  <p>
+    <a href="/code-of-conduct">See our Code of Conduct</a>
+  </p>
+{% endtext_tile %}
+
 <div class="py-16 bg-gray-light">
   <div class="container text-center">
     <h2 class="text-4xl mb-4">Frequently Anticipated Questions</h2>
@@ -62,19 +75,52 @@ seo:
   </div>
 
   <div class="container">
-    {% text_tile heading = "UnMute is made by you, for you." %}
-      <p>
-        We believe we can make the tech space a better place by providing an open
-        and raw storytelling platform. A place to slow down. To take time to
-        listen to the stories that surround us. And to use those stories to better
-        ourselves — our selfs, our careers, and our environments — along with the
-        industry in which we work.
-      </p>
-      <p>
-        <a href="/code-of-conduct">See our Code of Conduct</a>
-      </p>
-    {% endtext_tile %}
+    <div class="glide">
+      <div class="glide__track" data-glide-el="track">
+        <div class="glide__slides">
+          {% text_tile className="glide__slide", heading="Lorem ipsum, dolor sit amet consectetur adipisicing elit?" %}
+            <p>
+              A ipsum quasi veniam, ut minima nostrum at omnis quod aliquam quibusdam corporis ducimus sunt quo numquam maiores modi voluptatem aut odio?
+            </p>
+          {% endtext_tile %}
+
+          {% text_tile className="glide__slide", heading="Accusamus quam, sint amet?" %}
+            <p>
+              Nemo nesciunt repellat explicabo, maxime a libero, quibusdam perspiciatis animi tempora doloremque amet alias expedita consequatur ea odit id ipsa repellendus sapiente?
+            </p>
+          {% endtext_tile %}
+
+          {% text_tile className="glide__slide", heading="Cupiditate consequuntur suscipit quis assumenda?" %}
+            <p>
+              Voluptatum accusantium soluta mollitia ipsam. Ducimus fugiat blanditiis illum impedit possimus voluptate rerum nemo nam libero a, cumque, earum, quo quas vero.
+            </p>
+          {% endtext_tile %}
+
+          {% text_tile className="glide__slide", heading="Illum sequi nihil architecto maiores repellendus voluptatibus expedita?" %}
+            <p>
+              At, accusamus impedit autem dignissimos beatae cupiditate veniam recusandae molestiae alias. Facere rem id repellat inventore pariatur architecto quis, commodi nostrum excepturi?
+            </p>
+          {% endtext_tile %}
+
+          {% text_tile className="glide__slide", heading="Cumque laboriosam id dolore fuga?" %}
+            <p>
+              Praesentium error et modi distinctio accusamus maxime consequuntur dolorum labore sit fuga rem deleniti neque doloremque, repellat dolore? Tempore harum provident magni?
+            </p>
+          {% endtext_tile %}
+        </div>
+      </div>
+      <div class="glide__controls" data-glide-el="controls">
+        <button data-glide-dir="<">Prev</button>
+        <button data-glide-dir=">">Next</button>
+      </div>
+    </div>
   </div>
+
+  <script>
+    onInit(function() {
+      App.TextTileSlider.init()
+    })
+  </script>
 </div>
 
 {# --- Footer --- #}
