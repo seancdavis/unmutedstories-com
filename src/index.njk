@@ -108,10 +108,14 @@ seo:
             </p>
           {% endtext_tile %}
         </div>
-      </div>
-      <div class="glide__controls" data-glide-el="controls">
-        <button data-glide-dir="<">Prev</button>
-        <button data-glide-dir=">">Next</button>
+        <div data-glide-el="controls">
+          <button data-glide-dir="<" class="absolute top-0 z-10" style="left: 60px; transform: translate(0, 50%)">
+            {% icon name="arrow-left" %}
+          </button>
+          <button data-glide-dir=">" class="absolute top-0 z-10" style="right: 60px; transform: translate(0, 50%)">
+            {% icon name="arrow-right" %}
+          </button>
+        </div>
       </div>
     </div>
   </div>

@@ -20,11 +20,6 @@
   }
 }
 
-.glide__controls {
-  position: relative;
-  z-index: 2;
-}
-
 .glide__slide {
   height: inherit;
 }

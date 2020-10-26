@@ -5,6 +5,7 @@ class TextTileSlider {
 
   static init(selector = ".glide") {
     new Glide(selector, {
+      gap: 24,
       peek: 100,
       perView: 3,
       rewind: false
