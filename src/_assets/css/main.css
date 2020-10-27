@@ -1,9 +1,9 @@
-@import "../../../node_modules/@glidejs/glide/dist/css/glide.core.css";
+@import "../../../node_modules/swiper/swiper-bundle.css";
 
 @import "./global/variables.css";
 @import "./global/fonts.css";
 @import "./global/images.css";
-@import "./global/glide-overrides.css";
+@import "./global/swiper-overrides.css";
 
 @import "./tailwind/base";
 

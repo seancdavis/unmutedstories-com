@@ -1,4 +1,4 @@
-.glide__track {
+.swiper-container {
   &:after,
   &:before {
     content: " ";
@@ -6,7 +6,7 @@
     position: absolute;
     top: 0;
     width: 3rem;
-    z-index: 1;
+    z-index: 2;
   }
 
   &:before {
@@ -20,6 +20,10 @@
   }
 }
 
-.glide__slide {
-  height: inherit;
+.swiper-slide {
+  height: auto;
+}
+
+.swiper-button-disabled {
+  display: none;
 }

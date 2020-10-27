@@ -75,48 +75,44 @@ seo:
   </div>
 
   <div class="container">
-    <div class="glide">
-      <div class="glide__track" data-glide-el="track">
-        <div class="glide__slides">
-          {% text_tile className="glide__slide", heading="Lorem ipsum, dolor sit amet consectetur adipisicing elit?" %}
-            <p>
-              A ipsum quasi veniam, ut minima nostrum at omnis quod aliquam quibusdam corporis ducimus sunt quo numquam maiores modi voluptatem aut odio?
-            </p>
-          {% endtext_tile %}
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        {% text_tile className="swiper-slide", heading="Lorem ipsum, dolor sit amet consectetur adipisicing elit?" %}
+          <p>
+            A ipsum quasi veniam, ut minima nostrum at omnis quod aliquam quibusdam corporis ducimus sunt quo numquam maiores modi voluptatem aut odio?
+          </p>
+        {% endtext_tile %}
 
-          {% text_tile className="glide__slide", heading="Accusamus quam, sint amet?" %}
-            <p>
-              Nemo nesciunt repellat explicabo, maxime a libero, quibusdam perspiciatis animi tempora doloremque amet alias expedita consequatur ea odit id ipsa repellendus sapiente?
-            </p>
-          {% endtext_tile %}
+        {% text_tile className="swiper-slide", heading="Accusamus quam, sint amet?" %}
+          <p>
+            Nemo nesciunt repellat explicabo, maxime a libero, quibusdam perspiciatis animi tempora doloremque amet alias expedita consequatur ea odit id ipsa repellendus sapiente?
+          </p>
+        {% endtext_tile %}
 
-          {% text_tile className="glide__slide", heading="Cupiditate consequuntur suscipit quis assumenda?" %}
-            <p>
-              Voluptatum accusantium soluta mollitia ipsam. Ducimus fugiat blanditiis illum impedit possimus voluptate rerum nemo nam libero a, cumque, earum, quo quas vero.
-            </p>
-          {% endtext_tile %}
+        {% text_tile className="swiper-slide", heading="Cupiditate consequuntur suscipit quis assumenda?" %}
+          <p>
+            Voluptatum accusantium soluta mollitia ipsam. Ducimus fugiat blanditiis illum impedit possimus voluptate rerum nemo nam libero a, cumque, earum, quo quas vero.
+          </p>
+        {% endtext_tile %}
 
-          {% text_tile className="glide__slide", heading="Illum sequi nihil architecto maiores repellendus voluptatibus expedita?" %}
-            <p>
-              At, accusamus impedit autem dignissimos beatae cupiditate veniam recusandae molestiae alias. Facere rem id repellat inventore pariatur architecto quis, commodi nostrum excepturi?
-            </p>
-          {% endtext_tile %}
+        {% text_tile className="swiper-slide", heading="Illum sequi nihil architecto maiores repellendus voluptatibus expedita?" %}
+          <p>
+            At, accusamus impedit autem dignissimos beatae cupiditate veniam recusandae molestiae alias. Facere rem id repellat inventore pariatur architecto quis, commodi nostrum excepturi?
+          </p>
+        {% endtext_tile %}
 
-          {% text_tile className="glide__slide", heading="Cumque laboriosam id dolore fuga?" %}
-            <p>
-              Praesentium error et modi distinctio accusamus maxime consequuntur dolorum labore sit fuga rem deleniti neque doloremque, repellat dolore? Tempore harum provident magni?
-            </p>
-          {% endtext_tile %}
-        </div>
-        <div data-glide-el="controls">
-          <button data-glide-dir="<" class="absolute top-0 z-10" style="left: 60px; transform: translate(0, 50%)">
-            {% icon name="arrow-left" %}
-          </button>
-          <button data-glide-dir=">" class="absolute top-0 z-10" style="right: 60px; transform: translate(0, 50%)">
-            {% icon name="arrow-right" %}
-          </button>
-        </div>
+        {% text_tile className="swiper-slide", heading="Cumque laboriosam id dolore fuga?" %}
+          <p>
+            Praesentium error et modi distinctio accusamus maxime consequuntur dolorum labore sit fuga rem deleniti neque doloremque, repellat dolore? Tempore harum provident magni?
+          </p>
+        {% endtext_tile %}
       </div>
+      <button class="swiper-prev-button absolute z-10" style="left: 60px; top: 50%; transform: translateY(-50%)">
+        {% icon name="arrow-left" %}
+      </button>
+      <button class="swiper-next-button absolute z-10" style="right: 60px; top: 50%; transform: translateY(-50%)">
+        {% icon name="arrow-right" %}
+      </button>
     </div>
   </div>
 
