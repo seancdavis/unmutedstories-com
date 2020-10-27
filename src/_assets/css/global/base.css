@@ -43,7 +43,8 @@ li {
 
 img,
 svg {
-  @apply max-w-full;
+  @apply max-h-full
+    max-w-full;
 }
 
 input[type="submit"] {

@@ -18,8 +18,20 @@ seo:
         An event-driven community for underrepresented folx to share, listen, and learn.
       </span>
     </div>
-    <h1 class="text-5xl leading-tight mb-6">Everyone has a story.<br>
-      <span class="underline">Unmute</span> yours.</h1>
+    <h1 class="text-5xl leading-tight mb-6">
+      Everyone has a story.
+      <br>
+      <span class="relative">
+        <span class="relative z-10">Unmute</span>
+        <span class="absolute" style="left: -2.5rem; bottom: -.33rem; height: 4rem; z-index: 0;">
+          {% svg "unmute-highlight-left" %}
+        </span>
+        <span class="absolute w-full left-0" style="bottom: -.33rem; z-index: 0;">
+          {% svg "unmute-highlight-bottom" %}
+        </span>
+      </span>
+      yours.
+    </h1>
     <p class="max-w-md mb-8">
       Join us for an evening of storytelling with some of your favorite fellow nerds. We'll laugh, we'll cry. We may even hear a story without any industry jargon!
     </p>
