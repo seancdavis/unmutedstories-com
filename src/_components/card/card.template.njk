@@ -1,8 +1,39 @@
-<div class="rounded-lg bg-gray overflow-hidden inline-block text-left component--card {{ className }}">
-  <div class="bg-black h-48"></div>
+<div class="rounded-lg overflow-hidden inline-block component--card {{ className }}">
+  <img src="{{ image }}" alt="{{ title }}" class="block mb-4">
   <div class="py-4 px-2">
-    <h3 class="leading-snug text-lg">Speaker Name</h3>
-    <p class="text-md mb-4">Introduction</p>
-    <p class="m-0 text-xs">Social thingies here ...</p>
+    <div class="mb-4">
+      <h3 class="leading-snug text-lg mb-2">{{ title }}</h3>
+      <p class="text-sm mb-2">{{ subtitle }}</p>
+      <p class="text-sm">{{ meta }}</p>
+    </div>
+    <div class="flex items-center justify-center">
+      {% if social_links.twitter %}
+        <a
+          href="{{ social_links.twitter.url }}"
+          target="_blank"
+          class="mx-1 hover:opacity-75 transition-all duration-300"
+        >
+          {{ social_links.twitter.icon | safe }}
+        </a>
+      {% endif %}
+      {% if social_links.instagram %}
+        <a
+          href="{{ social_links.instagram.url }}"
+          target="_blank"
+          class="mx-1 hover:opacity-75 transition-all duration-300"
+        >
+          {{ social_links.instagram.icon | safe }}
+        </a>
+      {% endif %}
+      {% if social_links.facebook %}
+        <a
+          href="{{ social_links.facebook.url }}"
+          target="_blank"
+          class="mx-1 hover:opacity-75 transition-all duration-300"
+        >
+          {{ social_links.facebook.icon | safe }}
+        </a>
+      {% endif %}
+    </div>
   </div>
 </div>

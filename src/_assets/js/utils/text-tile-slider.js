@@ -1,6 +1,5 @@
 import Swiper, { Navigation } from "swiper"
 
-// configure Swiper to use modules
 Swiper.use([Navigation])
 
 class TextTileSlider {
