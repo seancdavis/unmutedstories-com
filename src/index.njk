@@ -8,7 +8,7 @@ seo:
 
 {# --- Jumbotron --- #}
 
-<div class="bg-black text-white" style="background-image: url(https://images.unsplash.com/photo-1513517178-1aca306e52a9?auto=format&w=800); background-size: 400px; background-position: calc(100vw - 500px) center; background-repeat: no-repeat;">
+<div class="bg-black text-white" style="background-image: url(/assets/images/bg-jumbotron.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;">
   <div class="container pt-8 pb-16">
     <div class="flex items-center mb-12">
       <span class="inline-block w-32 mr-8">
@@ -18,19 +18,17 @@ seo:
         An event-driven community for underrepresented folx to share, listen, and learn.
       </span>
     </div>
-    <div class="font-bold text-sm mb-6">
-      <span class="inline-block mr-6">October 1, 2020</span>
-      <span class="inline-block mr-6">7 PM EST</span>
-      <span class="inline-block">Virtual</span>
-    </div>
     <h1 class="text-5xl leading-tight mb-6">Everyone has a story.<br>
       <span class="underline">Unmute</span> yours.</h1>
     <p class="max-w-md mb-8">
       Join us for an evening of storytelling with some of your favorite fellow nerds. We'll laugh, we'll cry. We may even hear a story without any industry jargon!
     </p>
-    <div class="flex items-center">
-      {% button label = "Register now", url = "/", className = "mr-4" %}
-      <span class="inline-block text-xs">A statement about why they should register for FREE.</span>
+    <div class="flex items-center font-bold">
+      <span class="inline-block mr-3">October 1, 2020</span>
+      <span class="inline-block mx-3">7 PM EST</span>
+      <span class="inline-block mx-3">Virtual</span>
+      <span class="inline-block mx-3">Free</span>
+      {% button label="Register now", url="/", className="ml-3" %}
     </div>
   </div>
 </div>
@@ -104,7 +102,7 @@ seo:
 
 {# --- FAQ --- #}
 
-{% text_tile heading = "UnMute is made by you, for you." %}
+{% text_tile heading="UnMute is made by you, for you." %}
   <p>
     We believe we can make the tech space a better place by providing an open
     and raw storytelling platform. A place to slow down. To take time to
