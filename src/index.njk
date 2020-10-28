@@ -10,37 +10,41 @@ seo:
 
 <div class="bg-black text-white" style="background-image: url(/assets/images/bg-jumbotron.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;">
   <div class="container pt-8 pb-16">
-    <div class="flex items-center mb-12">
+    <div class="flex items-center mb-4 md:mb-12">
       <span class="inline-block w-32 mr-8">
         {% svg "unmute-logo" %}
       </span>
-      <span class="inline-block max-w-xs text-sm">
+      <span class="max-w-xs text-sm hidden md:inline-block">
         An event-driven community for underrepresented folx to share, listen, and learn.
       </span>
     </div>
-    <h1 class="text-5xl leading-tight mb-6">
-      Everyone has a story.
-      <br>
-      <span class="relative">
-        <span class="relative z-10">Unmute</span>
-        <span class="absolute" style="left: -2.5rem; bottom: -.33rem; height: 4rem; z-index: 0;">
-          {% svg "unmute-highlight-left" %}
+    <div class="text-center md:text-left mb-32 md:mb-0">
+      <h1 class="text-4xl sm:text-5xl leading-tight mb-6">
+        Everyone has a story.
+        <br>
+        <span class="relative">
+          <span class="relative z-10">Unmute</span>
+          <span class="absolute" style="left: -2.5rem; bottom: -.33rem; height: 4rem; z-index: 0;">
+            {% svg "unmute-highlight-left" %}
+          </span>
+          <span class="absolute w-full left-0" style="bottom: -.33rem; z-index: 0;">
+            {% svg "unmute-highlight-bottom" %}
+          </span>
         </span>
-        <span class="absolute w-full left-0" style="bottom: -.33rem; z-index: 0;">
-          {% svg "unmute-highlight-bottom" %}
-        </span>
-      </span>
-      yours.
-    </h1>
-    <p class="max-w-md mb-8">
-      Join us for an evening of storytelling with some of your favorite fellow nerds. We'll laugh, we'll cry. We may even hear a story without any industry jargon!
-    </p>
-    <div class="flex items-center font-bold">
+        yours.
+      </h1>
+      <p class="max-w-md mb-8 mx-auto md:mx-0">
+        Join us for an evening of storytelling with some of your favorite fellow nerds. We'll laugh, we'll cry. We may even hear a story without any industry jargon!
+      </p>
+    </div>
+    <div class="flex flex-wrap justify-center md:justify-start items-center font-bold">
       <span class="inline-block mr-3">October 1, 2020</span>
       <span class="inline-block mx-3">7 PM EST</span>
       <span class="inline-block mx-3">Virtual</span>
       <span class="inline-block mx-3">Free</span>
-      {% button label="Register now", url="/", className="ml-3" %}
+      <span class="block md:inline-block w-full md:w-auto mt-4 md:mt-0 ml-0 md:ml-3 text-center">
+        {% button label="Register now", url="/" %}
+      </span>
     </div>
   </div>
 </div>
