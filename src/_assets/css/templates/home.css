@@ -1,0 +1,50 @@
+.template--home--squiggles {
+  z-index: -1;
+
+  &.position-01 {
+    left: -8rem;
+    top: -6rem;
+    width: 12rem;
+  }
+
+  &.position-02 {
+    right: -8rem;
+    top: -3rem;
+    width: 12rem;
+  }
+
+  &.position-03 {
+    left: 13%;
+    top: 45%;
+    width: 2rem;
+  }
+
+  &.position-04 {
+    left: 83%;
+    top: 72%;
+    width: 2rem;
+  }
+}
+
+@screen sm {
+  .template--home--squiggles.position-03 {
+    left: 3%;
+  }
+
+  .template--home--squiggles.position-04 {
+    left: 94%;
+    top: 84%;
+  }
+}
+
+@screen lg {
+  .template--home--squiggles.position-03 {
+    left: 23%;
+    top: 40%;
+  }
+
+  .template--home--squiggles.position-04 {
+    left: 74%;
+    top: -6%;
+  }
+}

@@ -13,3 +13,5 @@
 
 @import "./tailwind/components";
 @import "./tailwind/utilities";
+
+@import-glob "./templates/**/*.css";

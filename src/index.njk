@@ -47,26 +47,26 @@ seo:
 
 {# --- Lineup --- #}
 
-<div class="py-16">
+<div class="py-16 overflow-x-hidden">
   <div class="container text-center">
     <h2 class="text-4xl mb-4">The Lineup</h2>
     <p class="max-w-lg mx-auto mb-8">
       We believe we can make the tech space a better place by providing and open and raw storytelling platform. A place to slow down. To take time to listen to each other's stories.
     </p>
     <div class="relative">
-      <span class="absolute" style="left: -8rem; top: -6rem; z-index: -1; width: 12rem;">
+      <span class="absolute template--home--squiggles position-01">
         {% svg "squiggles-01" %}
       </span>
-      <span class="absolute" style="right: -8rem; top: -3rem; z-index: -1; width: 12rem;">
+      <span class="absolute template--home--squiggles position-02">
         {% svg "squiggles-02" %}
       </span>
-      <span class="absolute" style="left: 23%; top: 40%; z-index: -1; width: 2rem;">
+      <span class="absolute template--home--squiggles position-03">
         {% svg "squiggles-03" %}
       </span>
-      <span class="absolute" style="left: 74%; top: -6%; z-index: -1; width: 2rem;">
+      <span class="absolute template--home--squiggles position-04">
         {% svg "squiggles-03" %}
       </span>
-      <div class="grid grid-cols-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         {% card
             image="/assets/images/speaker-01.png",
             title="Speaker (speaker-01)",
@@ -75,7 +75,7 @@ seo:
             facebook_url="/",
             twitter_url="/",
             instagram_url="/",
-            className="mx-4"
+            className="mx-4 mb-8 lg:mb-0"
         %}
         {% card
             image="/assets/images/speaker-02.png",
@@ -85,7 +85,7 @@ seo:
             facebook_url="/",
             twitter_url="/",
             instagram_url="/",
-            className="mx-4"
+            className="mx-4 mb-8 lg:mb-0"
         %}
         {% card
             image="/assets/images/speaker-03.png",
@@ -95,7 +95,7 @@ seo:
             facebook_url="/",
             twitter_url="/",
             instagram_url="/",
-            className="mx-4"
+            className="mx-4 mb-8 sm:mb-0"
         %}
         {% card
             image="/assets/images/speaker-04.png",

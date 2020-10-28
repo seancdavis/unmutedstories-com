@@ -23,7 +23,7 @@
 
     <script>
       function onInit(callback) {
-        if (typeof App !== 'undefined') 
+        if (typeof App !== 'undefined')
           return callback()
         setTimeout(onInit, 250, callback)
       }
