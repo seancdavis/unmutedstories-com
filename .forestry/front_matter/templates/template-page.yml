@@ -1,7 +1,26 @@
 ---
 label: "[Template] Page"
-hide_body: false
+hide_body: true
 fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: layout
+  type: select
+  default: default
+  config:
+    required: true
+    options:
+    - default
+    - home
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Layout
 - name: seo
   type: field_group
   config: {}
@@ -14,3 +33,15 @@ fields:
   label: SEO
   description: While there are sensible defaults, the SEO section provides the option
     to explicitly set meta tag values.
+- name: body
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Body
+  showOnly:
+    field: layout
+    value: default
