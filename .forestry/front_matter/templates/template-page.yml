@@ -45,3 +45,5 @@ fields:
   label: SEO
   description: While there are sensible defaults, the SEO section provides the option
     to explicitly set meta tag values.
+pages:
+- src/test.md
