@@ -21,18 +21,6 @@ fields:
       file: 
       path: 
   label: Layout
-- name: seo
-  type: field_group
-  config: {}
-  fields:
-  - name: seo
-    type: include
-    config: {}
-    template: fragment-seo
-    label: SEO
-  label: SEO
-  description: While there are sensible defaults, the SEO section provides the option
-    to explicitly set meta tag values.
 - name: body
   type: textarea
   default: ''
@@ -45,3 +33,15 @@ fields:
   showOnly:
     field: layout
     value: default
+- name: seo
+  type: field_group
+  config: {}
+  fields:
+  - name: seo
+    type: include
+    config: {}
+    template: fragment-seo
+    label: SEO
+  label: SEO
+  description: While there are sensible defaults, the SEO section provides the option
+    to explicitly set meta tag values.
