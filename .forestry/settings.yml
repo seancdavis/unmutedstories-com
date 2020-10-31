@@ -12,6 +12,12 @@ sections:
   new_doc_ext: md
   templates:
   - template-page
+- type: heading
+  label: Config
+- type: document
+  path: src/_data/seo_defaults.json
+  label: SEO Defaults
+  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
