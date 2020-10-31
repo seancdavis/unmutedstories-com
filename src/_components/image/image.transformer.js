@@ -33,7 +33,7 @@ module.exports = ({
   // Generates a signed imgix URL. It's pretty locked down to params at this
   // time, just to keep it simple. If a ratio was specified, then also calculate
   // the height as well.
-  const generateUrl = width => {
+  const generateUrl = (width) => {
     let params = { auto: "format,compress", w: width }
     if (ratio) {
       const [widthRatio, heightRatio] = ratio.split(":")
@@ -45,8 +45,8 @@ module.exports = ({
 
   // Given an array of widths (as number of pixels), it will return a string
   // that can be used for the srcset attributes for those widths.
-  const generateSrcsets = widths => {
-    const output = widths.map(width => {
+  const generateSrcsets = (widths) => {
+    const output = widths.map((width) => {
       width = parseInt(width)
       if (width === 0) return null
       if (width > largestSrc) largestSrc = width
@@ -56,7 +56,7 @@ module.exports = ({
   }
 
   // Given a string value, determine if the units are pixels.
-  const isPx = val => lodash.endsWith(val, "px")
+  const isPx = (val) => lodash.endsWith(val, "px")
 
   // These match Tailwind's breakpoints, with a passed-in max.
   let sizes = [
@@ -114,7 +114,7 @@ module.exports = ({
       const pc = parseFloat(obj.size) / 100.0
       // Look for the next size that was specified. This will help determine the
       // maximum that the image will (or can) be displayed at this current size.
-      const nextSetSize = sizes.slice(idx + 1).find(x => x.size)
+      const nextSetSize = sizes.slice(idx + 1).find((x) => x.size)
       // If there is a size larger than this one that was specified, use the min
       // value for that size as the largest this image can be, taking into
       // account the vw measurement passed. Otherwise, use the overall max size.

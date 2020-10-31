@@ -1,5 +1,5 @@
 <div class="rounded-lg overflow-hidden inline-block component--card {{ className }}">
-  <img src="{{ image }}" alt="{{ title }}" class="block mb-4 mx-auto h-48 md:h-56 w-auto">
+  {{ image | safe }}
   <div class="py-4 px-2">
     <div class="mb-4">
       <h3 class="leading-snug text-lg mb-2">{{ title }}</h3>

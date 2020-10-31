@@ -1,6 +1,6 @@
 const { Component } = require("../../../utils/shortcodes/component")
 
-module.exports = ({ facebook_url, twitter_url, instagram_url, ...props }) => {
+module.exports = ({ facebook_url, twitter_url, instagram_url, image: imgSrc, ...props }) => {
   const renderIcon = (name) => {
     const component = new Component("icon", { name })
     return component.render()
@@ -15,5 +15,15 @@ module.exports = ({ facebook_url, twitter_url, instagram_url, ...props }) => {
     instagram: createIconLink("instagram", instagram_url),
     twitter: createIconLink("twitter", twitter_url)
   }
-  return { social_links, ...props }
+
+  const imgComp = new Component("image", {
+    path: imgSrc,
+    sm: "256px",
+    md: "320px",
+    lg: "208px",
+    xl: "272px"
+  })
+  const image = imgComp.render()
+
+  return { image, social_links, ...props }
 }
