@@ -1,0 +1,16 @@
+---
+label: "[Template] Page"
+hide_body: false
+fields:
+- name: seo
+  type: field_group
+  config: {}
+  fields:
+  - name: seo
+    type: include
+    config: {}
+    template: fragment-seo
+    label: SEO
+  label: SEO
+  description: While there are sensible defaults, the SEO section provides the option
+    to explicitly set meta tag values.
