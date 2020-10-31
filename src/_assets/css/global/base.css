@@ -8,11 +8,14 @@ h6 {
 }
 
 h1 {
-  @apply text-3xl;
+  @apply mb-4
+    text-5xl;
 }
 
 h2 {
-  @apply text-2xl;
+  @apply font-bold
+    mb-2
+    text-2xl;
 }
 
 h3 {
@@ -38,7 +41,8 @@ ul {
 }
 
 li {
-  @apply list-disc;
+  @apply list-disc
+    mb-1;
 }
 
 img,
