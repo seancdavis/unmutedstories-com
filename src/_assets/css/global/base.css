@@ -28,7 +28,7 @@ p {
 }
 
 a {
-  @apply text-blue
+  @apply text-red
     underline;
 }
 
