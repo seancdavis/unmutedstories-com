@@ -2,22 +2,6 @@
 label: "[Fragment] Home Page"
 hide_body: true
 fields:
-- type: text
-  name: layout
-  label: layout
-- type: text
-  name: title
-  label: title
-- type: field_group
-  name: seo
-  label: seo
-  fields:
-  - type: file
-    name: image
-    label: image
-  - type: text
-    name: description
-    label: description
 - type: field_group
   name: lineup
   label: lineup
@@ -74,6 +58,10 @@ fields:
   - type: textarea
     name: body
     label: body
+    config:
+      wysiwyg: false
+      schema:
+        format: markdown
   - type: field_group_list
     name: questions
     label: questions
@@ -84,3 +72,7 @@ fields:
     - type: textarea
       name: body
       label: body
+      config:
+        wysiwyg: true
+        schema:
+          format: markdown
