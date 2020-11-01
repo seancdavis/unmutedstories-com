@@ -28,19 +28,26 @@ fields:
     - type: text
       name: fun_fact
       label: fun_fact
-    - type: field_group_list
-      name: social
-      label: social
+    - name: social
+      type: field_group
+      config: {}
       fields:
-      - type: text
-        name: twitter
-        label: twitter
-      - type: text
-        name: instagram
-        label: instagram
-      - type: text
-        name: facebook
-        label: facebook
+      - name: twitter
+        type: text
+        config:
+          required: false
+        label: Twitter
+      - name: instagram
+        type: text
+        config:
+          required: false
+        label: Instagram
+      - name: facebook
+        type: text
+        config:
+          required: false
+        label: Facebook
+      label: Social
 - type: field_group
   name: about
   label: about
