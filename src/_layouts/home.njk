@@ -1,3 +1,5 @@
+{% set page = layout_home %}
+
 {% include "layout/head.njk" %}
 
 {# --- Jumbotron --- #}
@@ -47,9 +49,9 @@
 
 <div class="py-16 pb-8 lg:pb-16 overflow-x-hidden">
   <div class="container text-center">
-    <h2 class="text-4xl mb-4">{{ lineup.heading }}</h2>
+    <h2 class="text-4xl mb-4">{{ page.lineup.heading }}</h2>
     <p class="max-w-lg mx-auto mb-8">
-      {{ lineup.body }}
+      {{ page.lineup.body }}
     </p>
     <div class="relative">
       <span class="absolute template--home--squiggles position-01">
@@ -65,7 +67,7 @@
         {% svg "squiggles-03" %}
       </span>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-        {% for speaker in lineup.speakers %}
+        {% for speaker in page.lineup.speakers %}
           {% card
               image=speaker.image,
               title=speaker.title,
@@ -87,7 +89,7 @@
 <div class="bg-red mb-0 py-16">
   <div class="container max-w-4xl text-white text-xl md:text-2xl font-headings">
     <p class="mb-0">
-      {{ about.body }}
+      {{ page.about.body }}
     </p>
   </div>
 </div>
@@ -96,16 +98,16 @@
 
 <div class="py-16 bg-gray-light">
   <div class="container text-center">
-    <h2 class="text-4xl mb-4">{{ faq.heading }}</h2>
+    <h2 class="text-4xl mb-4">{{ page.faq.heading }}</h2>
     <p class="max-w-lg mx-auto mb-8">
-      {{ faq.body }}
+      {{ page.faq.body }}
     </p>
   </div>
 
   <div class="container">
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        {% for question in faq.questions %}
+        {% for question in page.faq.questions %}
           {% text_tile className="swiper-slide", heading=question.heading %}
             {% markdown %}{{ question.body }}{% endmarkdown %}
           {% endtext_tile %}
