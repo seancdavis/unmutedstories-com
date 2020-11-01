@@ -21,18 +21,34 @@ fields:
       file: 
       path: 
   label: Layout
-- name: body
-  type: textarea
-  default: ''
-  config:
-    required: true
-    wysiwyg: true
-    schema:
-      format: markdown
-  label: Body
+- name: default_page
+  type: field_group
+  config: {}
+  fields:
+  - name: default_page_fragment
+    type: include
+    config: {}
+    template: fragment-default-page
+    label: Default Page Fragment
+  label: Default Page
+  description: Content for the default page layout.
   showOnly:
     field: layout
     value: default
+- name: layout_home
+  type: field_group
+  config: {}
+  fields:
+  - name: home_page_fragment
+    type: include
+    config: {}
+    template: fragment-home-page
+    label: Home Page Fragment
+  label: Home Page
+  description: Content for the home page layout.
+  showOnly:
+    field: layout
+    value: home
 - name: seo
   type: field_group
   config: {}
@@ -45,14 +61,3 @@ fields:
   label: SEO
   description: While there are sensible defaults, the SEO section provides the option
     to explicitly set meta tag values.
-- name: layout_home
-  type: field_group
-  config: {}
-  fields:
-  - name: home_page_fragment
-    type: include
-    config: {}
-    template: fragment-home-page
-    label: Home Page Fragment
-  label: Home Page
-  description: Content for the home page layout.
