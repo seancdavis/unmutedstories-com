@@ -17,7 +17,7 @@ layout_home:
       job_title: Speaker 01 - Job Title
       fun_fact: Speaker 01 - Fun Fact
       social:
-      - twitter: "/"
+        twitter: "/"
         instagram: "/"
         facebook: "/"
     - title: Speaker 02 - Name
@@ -25,7 +25,7 @@ layout_home:
       job_title: Speaker 02 - Job Title
       fun_fact: Speaker 02 - Fun Fact
       social:
-      - twitter: "/"
+        twitter: "/"
         instagram: "/"
         facebook: "/"
     - title: Speaker 03 - Name
@@ -33,7 +33,7 @@ layout_home:
       job_title: Speaker 03 - Job Title
       fun_fact: Speaker 03 - Fun Fact
       social:
-      - twitter: "/"
+        twitter: "/"
         instagram: "/"
         facebook: "/"
     - title: Speaker 04 - Name
@@ -41,7 +41,7 @@ layout_home:
       job_title: Speaker 04 - Job Title
       fun_fact: Speaker 04 - Fun Fact
       social:
-      - twitter: "/"
+        twitter: "/"
         instagram: "/"
         facebook: "/"
   about:
