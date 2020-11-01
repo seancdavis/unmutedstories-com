@@ -21,7 +21,7 @@ fields:
       file: 
       path: 
   label: Layout
-- name: default_page
+- name: layout_default
   type: field_group
   config: {}
   fields:
