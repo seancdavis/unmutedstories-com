@@ -1,9 +1,10 @@
 ---
 layout: home
-title: Unmute Your Story
+title: Home Page
 seo:
   image: "/assets/images/meta/unmute--meta--home.png"
   description: Everyone has a story. Unmute yours.
+  title: Unmute Your Story
 layout_home:
   lineup:
     heading: The Lineup
