@@ -7,8 +7,7 @@ fields:
   config:
     required: false
   label: Title
-  description: The <title> tag. This typically defaults to the title of the page,
-    using the title template (in the Admin section).
+  description: The title tag of the page and the default meta title.
 - name: description
   type: textarea
   default: ''
