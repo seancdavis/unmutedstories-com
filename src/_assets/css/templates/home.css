@@ -1,3 +1,36 @@
+.template--home--jumbotron {
+  background: linear-gradient(180deg, rgba(32, 59, 66, 1) 0%, rgba(32, 59, 66, 0) 100%);
+}
+
+@screen md {
+  .template--home--jumbotron {
+    background: linear-gradient(90deg, rgba(32, 59, 66, 1) 0%, rgba(32, 59, 66, 0) 100%);
+  }
+}
+
+.template--home--jumbotron-bg {
+  @apply absolute
+    bg-center
+    bg-cover
+    bg-no-repeat
+    h-full
+    left-0
+    top-0
+    w-full;
+
+  z-index: -1;
+
+  &.is-desktop {
+    @apply hidden;
+  }
+}
+
+@screen md {
+  .template--home--jumbotron-bg.is-desktop {
+    @apply block;
+  }
+}
+
 .template--home--squiggles {
   z-index: -1;
 

@@ -4,7 +4,9 @@
 
 {# --- Jumbotron --- #}
 
-<div class="bg-black text-white" style="background-image: url(/assets/images/bg-jumbotron.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;">
+<div class="bg-transparent text-white relative template--home--jumbotron">
+  <div class="template--home--jumbotron-bg is-mobile md:hidden" style="background-image: url({{ home_bg.mobile }})"></div>
+  <div class="template--home--jumbotron-bg is-desktop" style="background-image: url({{ home_bg.desktop }})"></div>
   <div class="container pt-8 pb-16">
     <div class="flex items-center mb-4 md:mb-12">
       <span class="inline-block w-32 mr-8">
