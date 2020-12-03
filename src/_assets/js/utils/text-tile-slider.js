@@ -11,12 +11,13 @@ class TextTileSlider {
         nextEl: ".swiper-next-button",
         prevEl: ".swiper-prev-button"
       },
-      slidesOffsetAfter: 50,
-      slidesOffsetBefore: 50,
-      slidesPerView: 2,
+      slidesOffsetAfter: 0,
+      slidesOffsetBefore: 0,
+      slidesPerView: 1,
       spaceBetween: 32,
       breakpoints: {
-        768: {
+        640: {
+          slidesPerView: 2,
           slidesOffsetAfter: 100,
           slidesOffsetBefore: 100
         },
