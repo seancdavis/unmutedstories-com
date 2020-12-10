@@ -23,16 +23,22 @@ fields:
   fields:
   - type: text
     name: title
-    label: title
+    label: Title
   - type: file
     name: image
-    label: image
+    label: Image
   - type: text
     name: job_title
-    label: job_title
-  - type: text
-    name: fun_fact
-    label: fun_fact
+    label: Job Title
+  - name: bio
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: markdown
+    label: Bio
   - name: social
     type: field_group
     config: {}
