@@ -12,12 +12,18 @@ layout_about:
   members:
   - title: Becky Blank
     image: "/website/uploads/member-becky.png"
-    bio: "**Collaborate and listen.** You’ll love me. I’m like 90s rap. I’ve got the
-      technical know-how you want, mixed with just enough of that sincerity to let
-      you know I care. I’m Tupac’s lyrics over Biggie’s beat. If you don’t get that,
-      it’s cool. Let’s say this... “if there’s a problem, I’ll solve it. Check with
-      my devs so we can resolve it.”"
+    bio: Becky is a dog lover, travel fiend and culinary school dropout who has spent
+      the last fifteen plus years leading technical projects and strategy at a variety
+      of software development shops. As the Director of Technical Operations at Ample,
+      she takes pride in making sure our team and our clients have what they need
+      to get their jobs done. She’s also a staunch evangelist for diversity and inclusion
+      in tech. She previously led the Cincinnati chapter of Girl Develop It to significant
+      growth. She now serves on the Board of Directors for We Pivot, a nonprofit organization
+      aimed at creating the conditions for marginalized individuals to feel included
+      and empowered in the tech industry.
     job_title: Director of Technical Operations at Ample
+    social:
+      twitter: https://twitter.com/beckysblank
   - title: Brandon Blank
     image: "/website/uploads/member-brandon.png"
     job_title: VP of Experience Design at Barefoot
