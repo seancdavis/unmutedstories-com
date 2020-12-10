@@ -55,9 +55,13 @@ layout_home:
     body: Proin vehicula tellus in nisl imperdiet, vel varius ligula placerat. Aenean
       mollis mi at cursus ornare. Sed nec enim erat.
     questions:
-    - heading: Lorem ipsum, dolor sit amet consectetur adipisicing elit?
-      body: A ipsum quasi veniam, ut minima nostrum at omnis quod aliquam quibusdam
-        corporis ducimus sunt quo numquam maiores modi voluptatem aut odio?
+    - heading: What is the format?
+      body: Each event will be approximately one hour long and will consist of 2-3
+        speakers. In between speakers, we will break the audience members into small
+        groups to reflect on the speaker’s talk and/or share their own stories with
+        each other. Think of this like facilitated networking. During this COVID season
+        we’re living in, all events will be held virtually until it is otherwise safe
+        to gather publicly.
     - heading: Accusamus quam, sint amet?
       body: |-
         Nemo nesciunt repellat explicabo, maxime a libero, quibusdam perspiciatis animi tempora doloremque amet alias expedita consequatur ea odit id ipsa repellendus sapiente?
