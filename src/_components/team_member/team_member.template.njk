@@ -1,0 +1,53 @@
+<div class="rounded-lg overflow-hidden inline-block component--team-member {{ className }}">
+  <div class="grid">
+    {# --- Column 1 --- #}
+    <div class="grid-cell-img mb-4">
+      {{ image | safe }}
+    </div>
+
+    {# --- Column 2 --- #}
+    <div class="px-4 text-center grid-cell-meta md:pl-16 md:pt-4 xl:pt-12">
+      <div class="mb-4">
+        <h3 class="leading-snug text-lg mb-2 font-bold">{{ title }}</h3>
+        <p class="text-sm mb-2">{{ subtitle }}</p>
+      </div>
+
+      {% if social_links.twitter or social_links.instagram or social_links.facebook %}
+        <div class="flex items-center justify-center mb-4">
+          {% if social_links.twitter %}
+            <a
+              href="{{ social_links.twitter.url }}"
+              target="_blank"
+              class="mx-1 hover:opacity-75 transition-all duration-300"
+            >
+              {{ social_links.twitter.icon | safe }}
+            </a>
+          {% endif %}
+          {% if social_links.instagram %}
+            <a
+              href="{{ social_links.instagram.url }}"
+              target="_blank"
+              class="mx-1 hover:opacity-75 transition-all duration-300"
+            >
+              {{ social_links.instagram.icon | safe }}
+            </a>
+          {% endif %}
+          {% if social_links.facebook %}
+            <a
+              href="{{ social_links.facebook.url }}"
+              target="_blank"
+              class="mx-1 hover:opacity-75 transition-all duration-300"
+            >
+              {{ social_links.facebook.icon | safe }}
+            </a>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+
+    {# --- Column 3 --- #}
+    <div class="grid-cell-bio md:pl-16 xl:pt-12">
+      {{ body | safe }}
+    </div>
+  </div>
+</div>
