@@ -62,22 +62,33 @@ layout_home:
         each other. Think of this like facilitated networking. During this COVID season
         we’re living in, all events will be held virtually until it is otherwise safe
         to gather publicly.
-    - heading: Accusamus quam, sint amet?
-      body: |-
-        Nemo nesciunt repellat explicabo, maxime a libero, quibusdam perspiciatis animi tempora doloremque amet alias expedita consequatur ea odit id ipsa repellendus sapiente?
-
-        [See our Code of Conduct](/code-of-conduct)
-    - heading: Cupiditate consequuntur suscipit quis assumenda?
-      body: Voluptatum accusantium soluta mollitia ipsam. Ducimus fugiat blanditiis
-        illum impedit possimus voluptate rerum nemo nam libero a, cumque, earum, quo
-        quas vero.
-    - heading: Illum sequi nihil architecto maiores repellendus voluptatibus expedita?
-      body: At, accusamus impedit autem dignissimos beatae cupiditate veniam recusandae
-        molestiae alias. Facere rem id repellat inventore pariatur architecto quis,
-        commodi nostrum excepturi?
-    - heading: Cumque laboriosam id dolore fuga?
-      body: Praesentium error et modi distinctio accusamus maxime consequuntur dolorum
-        labore sit fuga rem deleniti neque doloremque, repellat dolore? Tempore harum
-        provident magni?
+    - heading: Are these the same as conference talks?
+      body: Yes… and no. Yes, there will be someone sharing their experience. They
+        will be different from most conference talks because they won’t be centered
+        around a piece of technology or a methodology - they’ll be centered on that
+        person, their experience, their story.
+    - heading: 'I have a story to share! How can I be a speaker? '
+      body: We’d love to hear it! Email us at [hello@unmutedstories.com](mailto:hello@unmutedstories.com)
+        and tell us who you are and what kind of story you’d like to share.
+    - heading: Will the audience get to participate?
+      body: Some speakers may be available for Q&A after their talk. We also will
+        have breakout time where we put audience members into small groups to either
+        share reflections about the speaker’s story or share their own stories with
+        each other.
+    - heading: Is there a fee to attend?
+      body: No, for the time being, all events will be free to attendees. We would
+        like to try to host bigger events or conferences in the future, which may
+        be ticketed.
+    - heading: Are speakers compensated?
+      body: Given the early stage of our program, we currently have no financial backers
+        therefore we are unable to pay our speakers. Eventually, we would like to
+        evolve to a sponsorship model wherein our sponsors are able to offset speaker
+        fees. So for the time being, we appreciate the gracious donation of our speakers’
+        time and stories.
+    - heading: Who are you and why are you doing this?
+      body: Unmute is organized by a merry band of tech enthusiasts and practitioners
+        who appreciate the human side of our disciplines and are passionate about
+        uplifting the voices of those underrepresented in our industry. Learn more
+        about our organizing team here.
 
 ---
