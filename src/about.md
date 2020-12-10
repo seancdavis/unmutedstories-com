@@ -28,9 +28,9 @@ layout_about:
     image: "/website/uploads/member-brandon.png"
     job_title: VP of Experience Design at Barefoot
     bio: |-
-      Brandon is a results driven problem solver, focused on creating and constantly improving best-in-class consumer experiences. He has a deep understanding and empathy for why and how people use systems to connect with each other and the brands they love.
+      Brandon is a results-driven problem solver, focused on creating and constantly improving best-in-class consumer experiences. He has a deep understanding and empathy for why and how people use systems to connect with each other and the brands they love.
 
-      He has brought this expertise and insight to clients such as Bayer, ExxonMobil, Procter & Gamble, Mars and Bayer using enterprise platforms such as Sitecore, AEM and Drupal. Specialties include: Customer experience strategy and planning, interaction design, visual design, user research and testing.
+      He has brought this expertise and insight to clients such as Bayer, ExxonMobil, Procter & Gamble, Mars and Bayer using enterprise platforms such as Sitecore, AEM and Drupal. Specialties include: customer experience strategy and planning, interaction design, visual design, user research and testing.
   - title: Ryan Cayabyab
     image: "/website/uploads/member-ryan.png"
     job_title: UX Program Manager / Sr. Manager of IT at Alchemy
