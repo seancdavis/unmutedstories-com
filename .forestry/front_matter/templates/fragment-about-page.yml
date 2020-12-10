@@ -17,3 +17,39 @@ fields:
     required: false
   label: Body
   description: Text below the main heading and above the people.
+- type: field_group_list
+  name: members
+  label: Members
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: file
+    name: image
+    label: image
+  - type: text
+    name: job_title
+    label: job_title
+  - type: text
+    name: fun_fact
+    label: fun_fact
+  - name: social
+    type: field_group
+    config: {}
+    fields:
+    - name: twitter
+      type: text
+      config:
+        required: false
+      label: Twitter
+    - name: instagram
+      type: text
+      config:
+        required: false
+      label: Instagram
+    - name: facebook
+      type: text
+      config:
+        required: false
+      label: Facebook
+    label: Social
