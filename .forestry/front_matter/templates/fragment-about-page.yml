@@ -2,10 +2,18 @@
 label: "[Fragment] About Page"
 hide_body: true
 fields:
+- name: heading
+  type: text
+  config:
+    required: true
+  label: Heading
+  description: Main heading on the page.
 - type: textarea
   name: body
-  label: body
   config:
     wysiwyg: true
     schema:
       format: markdown
+    required: false
+  label: Body
+  description: Text below the main heading and above the people.

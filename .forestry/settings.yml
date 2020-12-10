@@ -17,7 +17,6 @@ sections:
 - type: document
   path: src/_data/next_event.json
   label: Next Event
-  match: "**/*"
 - type: document
   path: src/_data/seo_defaults.json
   label: SEO Defaults
