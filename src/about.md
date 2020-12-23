@@ -45,10 +45,10 @@ layout_about:
   - title: Sean C Davis
     image: "/website/uploads/member-sean.png"
     job_title: Director of Technology at Ample
-    bio: "**Tell me something**... Ever found yourself in a situation—surrounded by
-      strangers—feeling awkward and uncomfortable? I haven’t. I’m the kind of developer
-      who loves talking to people. Hearing their stories and understanding what makes
-      them tick….Wait…You’ve never met a developer like that? Hi, I’m Sean."
+    bio: |-
+      Sean is a tinkerer and a teacher. He is driven to learn as much as he can as fast as he can, and then pass those learnings onto others who may find them beneficial. A nerd who has dedicated the last decade to building applications for the web, Sean loves spending time helping developers solve problems through blog posts, workshops, or conference talks.
+
+      When pretending to not be a nerd, Sean is still likely learning something new. Perhaps it's baking with his wife and toddler or playing music at a restaurant with his friends. Or maybe it's time to break, be quiet, and take a solo stroll through the woods. Whatever it is, if there's a sandwich and a story, Sean is in.
     social:
       twitter: https://twitter.com/seancdavis29
       instagram: http://instagram.com/seancdavis29
