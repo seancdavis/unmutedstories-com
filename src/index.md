@@ -76,9 +76,8 @@ layout_home:
         share reflections about the speaker’s story or share their own stories with
         each other.
     - heading: Is there a fee to attend?
-      body: No, for the time being, all events will be free to attendees. We would
-        like to try to host bigger events or conferences in the future, which may
-        be ticketed.
+      body: No, for the time being, all events will be free to attendees. We may host
+        bigger events or conferences in the future, which may be ticketed.
     - heading: Are speakers compensated?
       body: Given the early stage of our program, we currently have no financial backers
         therefore we are unable to pay our speakers. Eventually, we would like to
@@ -89,6 +88,11 @@ layout_home:
       body: Unmute is organized by a merry band of tech enthusiasts and practitioners
         who appreciate the human side of our disciplines and are passionate about
         uplifting the voices of those underrepresented in our industry. Learn more
-        about our organizing team here.
+        about our organizing team [here](https://www.unmutedstories.com/about).
+    - heading: Can I sponsor an event?
+      body: While we don’t have a formal sponsorship, we are open to discussing it.
+        For the time being, any donations will be used to compensate our speakers
+        and cover our tech costs. Email us at [hello@unmutedstories.com](mailto:hello@unmutedstories.com)
+        and let us know you’re interested in becoming a sponsor.
 
 ---
