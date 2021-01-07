@@ -46,6 +46,9 @@ layout_about:
       Cincinnati, a monthly breakfast lecture series designed for creative communities,
       and led AIGA Cincinnati as President, his local chapter of the professional
       association for design.'
+    social:
+      twitter: https://twitter.com/rcayabyab
+      instagram: https://www.instagram.com/rcayabyab/
   - title: Sean C Davis
     image: "/website/uploads/member-sean.png"
     job_title: Director of Technology at Ample
