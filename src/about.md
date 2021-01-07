@@ -33,15 +33,19 @@ layout_about:
       He has brought this expertise and insight to clients such as Bayer, ExxonMobil, Procter & Gamble, Mars and Bayer using enterprise platforms such as Sitecore, AEM and Drupal. Specialties include: customer experience strategy and planning, interaction design, visual design, user research and testing.
   - title: Ryan Cayabyab
     image: "/website/uploads/member-ryan.png"
-    job_title: UX Program Manager / Sr. Manager of IT at Alchemy
-    bio: |-
-      As a design leader and manager, I've helped build some fantastic teams from the ground up. I've helped lay the groundwork that has helped team members succeed in their goals. I've implemented and managed design processes to ensure products get delivered on time within tight deadlines, and the designers are happy in the process. I've coached individuals to be successful leaders, even when I'm no longer part of the team. I'm delighted to give my legos away because I know I can find another tower to create and build on ([https://firstround.com/review/give-away-your-legos-and-other-commandments-for-scaling-startups/](https://firstround.com/review/give-away-your-legos-and-other-commandments-for-scaling-startups/ "https://firstround.com/review/give-away-your-legos-and-other-commandments-for-scaling-startups/")).
-
-      As a relationship builder, I've built both team and individual relationships that have not only helped the organization with its goals but help ensure smooth partnerships between teammates — even on the other side of the world.
-
-      As an award-winning product designer, I've worked with companies such as Procter & Gamble, Kroger, Toyota, ProScan, and many others.
-
-      I've been invited to speak and share my knowledge and experience with AIGA, IxDA, as well as several companies, colleges, and non-profits.
+    job_title: DesignOps & Senior IT Manager at Procter & Gamble
+    bio: 'Chosen as one of Cincinnati Magazine''s, The Future of Cincinnati: Ones
+      to Watch, UX and UI design leader Ryan Cayabyab is an award-winning designer,
+      speaker, and leader in the design community. If you ask Ryan? He''s simply a
+      self-proclaimed master of none. With over 15 years of experience, his career
+      has taken him from agencies, independent consulting, and adjunct teaching to
+      his current in-house adventure. Ryan started as an entry-level interactive designer
+      at a small boutique agency with Procter & Gamble as his first client to earning
+      his seat as a DesignOps leader within Procter & Gamble itself. Ryan is passionate
+      about his design community, volunteering locally for years. He served CreativeMornings
+      Cincinnati, a monthly breakfast lecture series designed for creative communities,
+      and led AIGA Cincinnati as President, his local chapter of the professional
+      association for design.'
   - title: Sean C Davis
     image: "/website/uploads/member-sean.png"
     job_title: Director of Technology at Ample
