@@ -99,9 +99,9 @@
 <div class="py-16 bg-gray-light">
   <div class="container text-center">
     <h2 class="text-4xl mb-4">{{ layout_home.faq.heading }}</h2>
-    <p class="max-w-lg mx-auto mb-8">
-      {{ layout_home.faq.body }}
-    </p>
+    <div class="max-w-lg mx-auto mb-8">
+      {{ layout_home.faq.body | safe }}
+    </div>
   </div>
 
   <div class="container">

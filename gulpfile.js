@@ -1,5 +1,5 @@
-const { src, dest, series, watch } = require("gulp")
-const fs = require("fs")
+const { src, dest, series, watch } = require("gulp");
+const fs = require("fs");
 
 const gulp = {
   clean: require("gulp-clean"),
@@ -8,8 +8,8 @@ const gulp = {
   run: require("gulp-run-command").default,
   webpack: require("webpack-stream"),
   webpackCompiler: require("webpack"),
-  vinylNamed: require("vinyl-named")
-}
+  vinylNamed: require("vinyl-named"),
+};
 
 const htmlExts = [
   "11tydata.js",
@@ -24,55 +24,67 @@ const htmlExts = [
   "ejs",
   "haml",
   "pug",
-  "jstl"
-]
+  "jstl",
+];
 
-const cssFiles = ["./src/**/*.css", "./tailwind.config.js", "./postcss.config.js"]
-const htmlFiles = htmlExts.map((ext) => `./src/**/*.${ext}`).concat(".eleventy.js")
+const cssFiles = [
+  "./src/**/*.css",
+  "./tailwind.config.js",
+  "./postcss.config.js",
+];
+const htmlFiles = htmlExts
+  .map((ext) => `./src/**/*.${ext}`)
+  .concat(".eleventy.js");
+const jsFiles = ["./src/_assets/js/**/*.js"];
 
 const clean = () => {
-  return src("dist", { allowEmpty: true, read: false }).pipe(gulp.clean())
-}
+  return src("dist", { allowEmpty: true, read: false }).pipe(gulp.clean());
+};
 
 const css = () => {
-  return src("./src/_assets/css/*.css").pipe(gulp.postcss()).pipe(dest("./dist/assets/css"))
-}
+  return src("./src/_assets/css/*.css")
+    .pipe(gulp.postcss())
+    .pipe(dest("./dist/assets/css"));
+};
 
 const html = () => {
-  return gulp.run("eleventy")()
-}
+  return gulp.run("eleventy")();
+};
 
 const js = () => {
   return src("./src/_assets/js/*.js")
     .pipe(gulp.vinylNamed())
-    .pipe(gulp.webpack(require("./webpack.config.js"), gulp.webpackCompiler, reload))
-    .pipe(dest("./dist/assets/js"))
-}
+    .pipe(
+      gulp.webpack(require("./webpack.config.js"), gulp.webpackCompiler, reload)
+    )
+    .pipe(dest("./dist/assets/js"));
+};
 
 const reload = (done) => {
-  if (!fs.existsSync("dist")) return done ? done() : null
-  return src("./dist").pipe(gulp.connect.reload())
-}
+  if (!fs.existsSync("dist")) return done ? done() : null;
+  return src("./dist").pipe(gulp.connect.reload());
+};
 
 const develop = (done) => {
-  clean()
-  html()
-  css()
-  js()
+  clean();
+  html();
+  css();
+  js();
 
   gulp.connect.server({
     root: "dist",
     port: "8000",
-    livereload: true
-  })
+    livereload: true,
+  });
 
-  cssFiles.map((file) => watch(file, series(css, reload)))
-  htmlFiles.map((file) => watch(file, series(html, css, reload)))
+  cssFiles.map((file) => watch(file, series(css, reload)));
+  htmlFiles.map((file) => watch(file, series(html, css, reload)));
+  jsFiles.map((file) => watch(file, series(js, reload)));
 
-  done()
-}
+  done();
+};
 
-const build = series(clean, html, css, js)
+const build = series(clean, html, css, js);
 
 module.exports = {
   build: build,
@@ -82,5 +94,5 @@ module.exports = {
   develop: develop,
   html: html,
   js: js,
-  reload: reload
-}
+  reload: reload,
+};

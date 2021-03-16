@@ -1,6 +1,6 @@
-import "./utils/scan-links"
-import TextTileSlider from "./utils/text-tile-slider"
+import "./utils/scan-links";
+import TextTileSlider from "./utils/text-tile-slider";
 
-import "./lib/analytics"
+import "./lib/analytics";
 
-export { TextTileSlider }
+export { TextTileSlider };
