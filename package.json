@@ -6,7 +6,8 @@
   "scripts": {
     "build": "gulp build",
     "clean": "gulp clean",
-    "develop": "gulp develop",
+    "dev": "gulp develop",
+    "develop": "npm run dev",
     "start": "develop",
     "test": "jest"
   },
