@@ -51,7 +51,7 @@ layout_about:
       instagram: https://www.instagram.com/rcayabyab/
   - title: Sean C Davis
     image: "/website/uploads/member-sean.png"
-    job_title: Director of Technology at Ample
+    job_title: Founding Engineer at Grouparoo
     bio: |-
       Sean is a tinkerer and a teacher. He is driven to learn as much as he can as fast as he can, and then pass those learnings onto others who may find them beneficial. A nerd who has dedicated the last decade to building applications for the web, Sean loves spending time helping developers solve problems through blog posts, workshops, or conference talks.
 
