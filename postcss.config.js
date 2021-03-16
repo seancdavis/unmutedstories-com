@@ -6,6 +6,6 @@ module.exports = {
     require("tailwindcss"),
     require("autoprefixer"),
     require("postcss-custom-properties"),
-    ...(process.env.ELEVENTY_ENV === "production" ? [require("cssnano")] : [])
-  ]
-}
+    ...(process.env.ELEVENTY_ENV === "production" ? [require("cssnano")] : []),
+  ],
+};

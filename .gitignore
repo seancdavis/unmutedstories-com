@@ -12,6 +12,3 @@ dist/
 
 # netlify-cli config
 .netlify/state.json
-
-# logs and errors
-yarn-error.log
