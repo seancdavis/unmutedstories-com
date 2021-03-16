@@ -13,7 +13,7 @@ layout_home:
       to each other's stories.
     speakers:
     - title: Speaker 01 - Name
-      image: "/website/uploads/speaker-01.png"
+      image: "/website/uploads/member-sean.png"
       job_title: Speaker 01 - Job Title
       fun_fact: Speaker 01 - Fun Fact
       social:
@@ -21,7 +21,7 @@ layout_home:
         instagram: "/"
         facebook: "/"
     - title: Speaker 02 - Name
-      image: "/website/uploads/speaker-02.png"
+      image: "/website/uploads/member-becky.png"
       job_title: Speaker 02 - Job Title
       fun_fact: Speaker 02 - Fun Fact
       social:
@@ -29,7 +29,7 @@ layout_home:
         instagram: "/"
         facebook: "/"
     - title: Speaker 03 - Name
-      image: "/website/uploads/speaker-03.png"
+      image: "/website/uploads/member-brandon.png"
       job_title: Speaker 03 - Job Title
       fun_fact: Speaker 03 - Fun Fact
       social:
@@ -37,7 +37,7 @@ layout_home:
         instagram: "/"
         facebook: "/"
     - title: Speaker 04 - Name
-      image: "/website/uploads/speaker-04.png"
+      image: "/website/uploads/member-ryan.png"
       job_title: Speaker 04 - Job Title
       fun_fact: Speaker 04 - Fun Fact
       social:
