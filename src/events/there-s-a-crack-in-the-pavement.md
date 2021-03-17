@@ -1,7 +1,6 @@
 ---
 date: 2021-04-20T23:00:59.000+00:00
 title: There's a Crack in the Pavement
-slug: 01-crack-in-the-pavement
 location: Virtual
 cost: Free
 body: |-

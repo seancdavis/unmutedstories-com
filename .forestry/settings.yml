@@ -27,7 +27,7 @@ sections:
   match: "**/*.json"
   new_doc_ext: json
   templates:
-  - model-speaker
+  - fragment-speaker
 - type: heading
   label: Config
 - type: document

@@ -12,13 +12,6 @@ fields:
   config:
     required: true
   label: Title
-- name: slug
-  type: text
-  config:
-    required: true
-  label: Slug
-  description: This will serve as the path to the event detail page. It will be nested
-    under `/events
 - name: date
   type: datetime
   label: Date
