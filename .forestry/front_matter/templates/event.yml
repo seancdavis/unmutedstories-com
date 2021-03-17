@@ -44,3 +44,5 @@ fields:
       format: markdown
   label: Body
   description: Include details about the event here.
+pages:
+- src/events/there-s-a-crack-in-the-pavement.md
