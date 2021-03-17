@@ -1,0 +1,13 @@
+{
+  "name": "Speaker 01",
+  "image": "/website/uploads/member-brandon.png",
+  "job_title": "Job Title",
+  "fun_fact": "Fun Fact",
+  "talk_title": "This is the talk title ...",
+  "talk_body": "Ex dolore consectetur cillum irure. Dolor nulla commodo nulla elit mollit Lorem sint. Duis exercitation consequat enim qui commodo ut. Nostrud id consequat excepteur eiusmod ea irure.",
+  "social": {
+    "twitter": "/",
+    "instagram": "/",
+    "facebook": "/"
+  }
+}
