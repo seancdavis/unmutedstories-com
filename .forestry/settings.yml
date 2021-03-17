@@ -10,7 +10,7 @@ sections:
   create: all
   match: "**/*.md"
   exclude: events/**/*
-  new_doc_ext: ''
+  new_doc_ext: app
   templates:
   - template-page
 - type: directory

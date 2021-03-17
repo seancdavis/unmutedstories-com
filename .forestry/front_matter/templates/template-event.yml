@@ -2,6 +2,13 @@
 label: "[Template] Event"
 hide_body: true
 fields:
+- name: layout
+  type: text
+  config:
+    required: false
+  label: Layout
+  hidden: true
+  default: event
 - name: title
   type: text
   config:
@@ -44,5 +51,13 @@ fields:
       format: markdown
   label: Body
   description: Include details about the event here.
+- name: speakers
+  type: blocks
+  label: Speakers
+  template_types:
+  - model-speaker
+  config:
+    min: 
+    max: 
 pages:
 - src/events/there-s-a-crack-in-the-pavement.md
