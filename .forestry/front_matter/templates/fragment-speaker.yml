@@ -13,6 +13,15 @@ fields:
 - type: text
   name: job_title
   label: Job title
+- name: body
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Bio
 - type: text
   name: fun_fact
   label: Fun Fact
