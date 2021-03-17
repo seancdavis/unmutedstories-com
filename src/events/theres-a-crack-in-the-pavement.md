@@ -1,5 +1,6 @@
 ---
 date: 2021-04-20T23:00:59.000+00:00
+time: 7 PM ET / 4 PM PT
 title: There's a Crack in the Pavement
 location: Virtual
 cost: Free

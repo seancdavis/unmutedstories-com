@@ -22,6 +22,10 @@ fields:
     time_format: 
     display_utc: false
   default: now
+- name: time
+  type: text
+  label: Time
+  description: The time is set separately so you have more control over how it is displayed on the website.
 - name: location
   type: text
   config:
@@ -56,4 +60,4 @@ fields:
     labelField: 
   label: Speakers
 pages:
-- src/events/there-s-a-crack-in-the-pavement.md
+- src/events/theres-a-crack-in-the-pavement.md

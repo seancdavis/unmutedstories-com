@@ -33,6 +33,7 @@
     "imgix-core-js": "^2.3.1",
     "jest": "^26.4.0",
     "lodash": "^4.17.20",
+    "luxon": "^1.26.0",
     "markdown-it": "^11.0.0",
     "netlify-plugin-a11y": "^0.0.12",
     "netlify-plugin-inline-critical-css": "^1.1.3",
