@@ -10,5 +10,19 @@ body: |-
 
   Sint dolore esse sunt sunt eu magna aliqua incididunt irure exercitation magna cupidatat. Laborum ullamco sit eu non id eu excepteur id do fugiat eiusmod. Quis culpa labore ea irure aute elit consequat deserunt labore ipsum. Sit amet aliqua elit sint excepteur ex deserunt exercitation.
 layout: event
-speakers: []
+speakers:
+- name: 'Speaker #1'
+  image: "/website/uploads/member-brandon.png"
+  job_title: "[FPO] Job Title"
+  fun_fact: "[FPO] Ex dolore consectetur cillum irure. Dolor nulla commodo nulla elit
+    mollit Lorem sint."
+  talk_title: There's a Crack in the Pavement
+  talk_body: Ex dolore consectetur cillum irure. Dolor nulla commodo nulla elit mollit
+    Lorem sint. Duis exercitation consequat enim qui commodo ut. Nostrud id consequat
+    excepteur eiusmod ea irure.
+  social:
+    instagram: "/"
+    facebook: "/"
+    twitter: "/"
+
 ---
