@@ -12,42 +12,6 @@ fields:
   - type: textarea
     name: body
     label: body
-  - type: field_group_list
-    name: speakers
-    label: speakers
-    fields:
-    - type: text
-      name: title
-      label: title
-    - type: file
-      name: image
-      label: image
-    - type: text
-      name: job_title
-      label: job_title
-    - type: text
-      name: fun_fact
-      label: fun_fact
-    - name: social
-      type: field_group
-      config: {}
-      fields:
-      - name: twitter
-        type: text
-        config:
-          required: false
-        label: Twitter
-      - name: instagram
-        type: text
-        config:
-          required: false
-        label: Instagram
-      - name: facebook
-        type: text
-        config:
-          required: false
-        label: Facebook
-      label: Social
 - type: field_group
   name: about
   label: about
