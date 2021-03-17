@@ -24,7 +24,7 @@ sections:
   label: Speakers
   create: documents
   match: "**/*.json"
-  new_doc_ext: ".json"
+  new_doc_ext: json
   templates:
   - fragment-speaker
 - type: heading
