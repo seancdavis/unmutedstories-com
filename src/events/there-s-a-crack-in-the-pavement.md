@@ -10,8 +10,7 @@ body: |-
   Nulla laboris excepteur adipisicing non non amet occaecat. Ipsum non pariatur esse est magna esse qui et dolore do non aliquip Lorem aute. Consectetur minim proident quis deserunt ea id et labore laborum. Amet dolore magna in id ad. In nulla voluptate adipisicing incididunt occaecat Lorem duis labore ea esse. Ullamco incididunt sit sunt minim mollit.
 
   Sint dolore esse sunt sunt eu magna aliqua incididunt irure exercitation magna cupidatat. Laborum ullamco sit eu non id eu excepteur id do fugiat eiusmod. Quis culpa labore ea irure aute elit consequat deserunt labore ipsum. Sit amet aliqua elit sint excepteur ex deserunt exercitation.
-layout: ''
+layout: event
 speakers:
-- src/_data/speakers/speaker-placeholder.json
-
+  - src/_data/speakers/speaker-placeholder.json
 ---
