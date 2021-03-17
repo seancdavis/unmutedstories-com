@@ -20,14 +20,6 @@ sections:
   match: "**/*.md"
   templates:
   - template-event
-- type: directory
-  path: src/_data/speakers
-  label: Speakers
-  create: documents
-  match: "**/*.json"
-  new_doc_ext: json
-  templates:
-  - fragment-speaker
 - type: heading
   label: Config
 - type: document
