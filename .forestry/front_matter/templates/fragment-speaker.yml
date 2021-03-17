@@ -1,5 +1,5 @@
 ---
-label: "[Model] Speaker"
+label: "[Fragment] Speaker"
 hide_body: true
 fields:
 - name: name
