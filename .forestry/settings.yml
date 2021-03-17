@@ -18,7 +18,7 @@ sections:
   create: documents
   match: "**/*.md"
   templates:
-  - event
+  - template-event
 - type: directory
   path: src/_data/speakers
   label: Speakers
@@ -26,7 +26,7 @@ sections:
   match: "**/*.json"
   new_doc_ext: json
   templates:
-  - fragment-speaker
+  - model-speaker
 - type: heading
   label: Config
 - type: document
