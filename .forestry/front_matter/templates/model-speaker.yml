@@ -48,3 +48,5 @@ fields:
       required: false
     label: Facebook
   label: Social
+pages:
+- src/_data/speakers/speaker-placeholder.json
