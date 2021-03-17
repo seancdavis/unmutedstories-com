@@ -12,6 +12,21 @@ sections:
   new_doc_ext: md
   templates:
   - template-page
+- type: directory
+  path: src/events
+  label: Events
+  create: documents
+  match: "**/*.md"
+  templates:
+  - event
+- type: directory
+  path: src/_data/speakers
+  label: Speakers
+  create: documents
+  match: "**/*.json"
+  new_doc_ext: ".json"
+  templates:
+  - fragment-speaker
 - type: heading
   label: Config
 - type: document
