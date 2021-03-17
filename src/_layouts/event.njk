@@ -1,0 +1,14 @@
+{% include "layout/head.njk" %}
+
+{% include "layout/header.njk" %}
+
+<main class="container py-20">
+  <div class="max-w-2xl">
+    <h1>{{ title }}</h1>
+    {% markdown %}{{ body | safe }}{% endmarkdown %}
+  </div>
+</main>
+
+{% include "layout/footer.njk" %}
+
+{% include "layout/foot.njk" %}
