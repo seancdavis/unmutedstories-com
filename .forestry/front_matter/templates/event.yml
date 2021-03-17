@@ -1,4 +1,46 @@
 ---
 label: Event
 hide_body: true
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: slug
+  type: text
+  config:
+    required: true
+  label: Slug
+  description: This will serve as the path to the event detail page. It will be nested
+    under `/events
+- name: date
+  type: datetime
+  label: Date
+  description: Leave blank if you don't know it and it will be set to "TBD."
+  config:
+    required: false
+    date_format: ''
+    time_format: 
+    display_utc: false
+  default: now
+- name: location
+  type: text
+  config:
+    required: false
+  label: Location
+- name: cost
+  type: text
+  config:
+    required: false
+  label: Cost
+- name: body
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Body
+  description: Include details about the event here.
