@@ -10,6 +10,5 @@ body: |-
 
   Sint dolore esse sunt sunt eu magna aliqua incididunt irure exercitation magna cupidatat. Laborum ullamco sit eu non id eu excepteur id do fugiat eiusmod. Quis culpa labore ea irure aute elit consequat deserunt labore ipsum. Sit amet aliqua elit sint excepteur ex deserunt exercitation.
 layout: event
-speakers:
-  - src/_data/speakers/speaker-placeholder.json
+speakers: []
 ---
