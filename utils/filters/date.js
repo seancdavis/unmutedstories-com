@@ -1,8 +1,7 @@
 const { DateTime } = require("luxon");
 
 /**
- * Add a prettier "slugify" filter. The "slug" filter does not remove colons,
- * commas, apostrophes, etc. This does.
+ * Add a "formatDate" filter to make dates pretty.
  *
  * @param {object} eleventyConfig Eleventy's configuration object
  */

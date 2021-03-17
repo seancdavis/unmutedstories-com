@@ -1,0 +1,23 @@
+.layout--event {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  > main {
+    flex: 1;
+  }
+
+  .speaker {
+    grid-template-columns: auto;
+
+    .speaker--image {
+      max-width: 12.5rem;
+    }
+  }
+}
+
+@screen md {
+  .layout--event .speaker {
+    grid-template-columns: 12.5rem auto;
+  }
+}

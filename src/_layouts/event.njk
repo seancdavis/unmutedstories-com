@@ -3,9 +3,137 @@
 {% include "layout/header.njk" %}
 
 <main class="container py-20">
-  <div class="max-w-2xl">
-    <h1>{{ title }}</h1>
+  <h1 class="leading-tight md:leading-normal">{{ title }}</h1>
+
+  {# --- Details --- #}
+
+  <ul class="pl-0 mb-6">
+    <li class="list-none mb-1">
+      <strong>Date:</strong>
+      <span>{{ date | formatDate('DATE_MED') }}</span>
+    </li>
+    <li class="list-none mb-1">
+      <strong>Time:</strong>
+      <span>{{ time }}</span>
+    </li>
+    <li class="list-none mb-1">
+      <strong>Location:</strong>
+      <span>{{ location }}</span>
+    </li>
+    <li class="list-none mb-1">
+      <strong>Cost:</strong>
+      <span>{{ cost }}</span>
+    </li>
+    <li class="list-none mb-0">
+      <strong>Register:</strong>
+      <a href="#register">Register below</a>
+    </li>
+  </ul>
+
+  {# --- Event Description --- #}
+
+  <div class="max-w-2xl mb-12">
     {% markdown %}{{ body | safe }}{% endmarkdown %}
+  </div>
+
+  {# --- Speakers --- #}
+
+  <div class="mb-12">
+    <h2 class="mb-4">Our storytellers</h2>
+
+    {% for speaker in speakers %}
+      <div class="speaker grid gap-4 md:gap-8 max-w-4xl mb-8">
+        <div class="text-center speaker--image mx-auto">
+          <span class="block mb-2">
+            {% image path=speaker.image, sm="256px", md="320px", lg="208px", xl="272px" %}
+          </span>
+          <strong class="block mb-2 text-lg">{{ speaker.title }}</strong>
+          <span class="block text-sm">
+            <em>{{ speaker.job_title }}</em>
+          </span>
+          <span class="block text-sm">
+            {{ speaker.company }}
+          </span>
+          {% if speaker.social.twitter or speaker.social.instagram or speaker.social.facebook %}
+            <div class="flex items-center justify-center mt-4">
+              {% if speaker.social.twitter %}
+                <a
+                  href="{{ speaker.social.twitter }}"
+                  target="_blank"
+                  class="mx-1 hover:opacity-75 transition-all duration-300"
+                >
+                  {% icon name="twitter" %}
+                </a>
+              {% endif %}
+              {% if speaker.social.facebook %}
+                <a
+                  href="{{ speaker.social.facebook }}"
+                  target="_blank"
+                  class="mx-1 hover:opacity-75 transition-all duration-300"
+                >
+                  {% icon name="facebook" %}
+                </a>
+              {% endif %}
+              {% if speaker.social.instagram %}
+                <a
+                  href="{{ speaker.social.instagram }}"
+                  target="_blank"
+                  class="mx-1 hover:opacity-75 transition-all duration-300"
+                >
+                  {% icon name="instagram" %}
+                </a>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+        <div class="">
+          <h3>{{ speaker.talk_title }}</h3>
+          <div class="mb-4">
+            {% markdown %}{{ speaker.talk_body }}{% endmarkdown %}
+          </div>
+          <h4>About {{ speaker.title | firstWord }}</h4>
+          <div>
+            {% markdown %}{{ speaker.body }}{% endmarkdown %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  {# --- Registration Form --- #}
+
+  <div class="max-w-xl" id="register">
+    <h2>Register to attend this event</h2>
+    <form
+      name="[Registration] {{ title }}" action="post" data-netlify="true">
+
+      <div class="mb-4">
+        <label class="block mb-1" for="reg--name">Your Name</label>
+        <input class="rounded-md h-12 px-4 py-2 block w-full border" type="text" name="name" id="reg--name">
+      </div>
+
+      <div class="mb-4">
+        <label class="block mb-1" for="reg--email">Your Email</label>
+        <input class="rounded-md h-12 px-4 py-2 block w-full border" type="email" name="email" id="reg--email">
+      </div>
+
+    <input
+      type="submit"
+      value="Register!"
+      class="
+        bg-yellow
+        duration-300
+        inline-block
+        no-underline
+        px-8
+        py-3
+        relative
+        rounded-full
+        text-black
+        transition-all
+        component--button
+      ">
+    </form>
   </div>
 </main>
 

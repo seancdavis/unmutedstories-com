@@ -13,6 +13,9 @@ fields:
 - type: text
   name: job_title
   label: Job title
+- type: text
+  name: company
+  label: Company Name
 - name: body
   type: textarea
   default: ''
@@ -22,9 +25,6 @@ fields:
     schema:
       format: markdown
   label: Bio
-- type: text
-  name: fun_fact
-  label: Fun Fact
 - type: text
   name: talk_title
   label: Talk Title
