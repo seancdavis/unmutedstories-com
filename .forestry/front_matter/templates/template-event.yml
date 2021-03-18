@@ -46,6 +46,16 @@ fields:
       format: markdown
   label: Body
   description: Include details about the event here.
+- name: snippet
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Snippet
+  description: The snippet is a short introduction that is currently shown on the home page.
 - name: speakers
   type: field_group_list
   fields:

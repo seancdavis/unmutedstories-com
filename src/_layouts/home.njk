@@ -50,10 +50,13 @@
 
 <div class="py-16 pb-8 lg:pb-16 overflow-x-hidden">
   <div class="container text-center">
-    <h2 class="text-4xl mb-4">{{ layout_home.lineup.heading }}</h2>
-    <p class="max-w-lg mx-auto mb-8">
-      {{ layout_home.lineup.body }}
-    </p>
+    <h2 class="text-4xl mb-4">{{ next_event.data.title }}</h2>
+    <div class="max-w-lg mx-auto mb-4">
+      {% markdown %}{{ next_event.data.snippet }}{% endmarkdown %}
+    </div>
+    <div class="max-w-lg mx-auto mb-8">
+      {% button label="View Details", url=next_event.url, theme="outline" %}
+    </div>
     <div class="relative">
       <span class="absolute template--home--squiggles position-01">
         {% svg "squiggles-01" %}
@@ -67,20 +70,49 @@
       <span class="absolute template--home--squiggles position-04">
         {% svg "squiggles-03" %}
       </span>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-        {% for speaker in layout_home.lineup.speakers %}
-          {% card
-              image=speaker.image,
-              title=speaker.title,
-              subtitle=speaker.job_title,
-              meta=speaker.fun_fact,
-              facebook_url=speaker.social.facebook,
-              twitter_url=speaker.social.twitter,
-              instagram_url=speaker.social.instagram,
-              className="mx-4 mb-8 lg:mb-0"
-          %}
+
+
+      {% if next_event.data.speakers.length > 1 %}
+        <h3 class="text-3xl mt-8 mb-4">
+          Featured Speaker{% if next_event.data.speakers.length > 1 %}s{% endif %}
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-{{ next_event.data.speakers.length }}">
+          {% for speaker in next_event.data.speakers %}
+            {% speaker_card
+                image=speaker.image,
+                name=speaker.title,
+                job_title=speaker.job_title,
+                company=speaker.company,
+                social=speaker.social,
+                className="mx-4 mb-8 lg:mb-0 template-home--speaker"
+            %}
+          {% endfor %}
+        </div>
+      {% else %}
+        {% for speaker in next_event.data.speakers %}
+          <div class="template-home--solo-speaker grid gap-4 md:gap-8 max-w-4xl mt-12 text-left mx-auto">
+            <div class="text-center speaker--image mx-auto">
+              {% speaker_card
+                    image=speaker.image,
+                    name=speaker.title,
+                    job_title=speaker.job_title,
+                    company=speaker.company,
+                    social=speaker.social
+              %}
+            </div>
+            <div>
+              <h3>{{ speaker.talk_title }}</h3>
+              <div class="mb-4">
+                {% markdown %}{{ speaker.talk_body }}{% endmarkdown %}
+              </div>
+              <h4>About {{ speaker.title | firstWord }}</h4>
+              <div>
+                {% markdown %}{{ speaker.body }}{% endmarkdown %}
+              </div>
+            </div>
+          </div>
         {% endfor %}
-      </div>
+      {% endif %}
     </div>
   </div>
 </div>

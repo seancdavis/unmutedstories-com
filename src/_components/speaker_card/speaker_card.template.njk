@@ -1,12 +1,17 @@
-<div class="rounded-lg overflow-hidden inline-block component--card {{ className }}">
-  {{ image | safe }}
-  <div class="py-4 px-2">
-    <div class="mb-4">
-      <h3 class="leading-snug text-lg mb-2">{{ title }}</h3>
-      <p class="text-sm mb-2">{{ subtitle }}</p>
-      <p class="text-sm">{{ meta }}</p>
-    </div>
-    <div class="flex items-center justify-center">
+<div class="{{ className }}">
+  <span class="block mb-2">
+    {{ image | safe }}
+  </span>
+  <strong class="block mb-2 text-lg">{{ name }}</strong>
+  <span class="block text-sm">
+    <em>{{ job_title }}</em>
+  </span>
+  <span class="block text-sm">
+    {{ company }}
+  </span>
+
+  {% if social_links.twitter or social_links.instagram or social_links.facebook %}
+    <div class="flex items-center justify-center mt-4">
       {% if social_links.twitter %}
         <a
           href="{{ social_links.twitter.url }}"
@@ -35,5 +40,5 @@
         </a>
       {% endif %}
     </div>
-  </div>
+  {% endif %}
 </div>

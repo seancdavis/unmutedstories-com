@@ -1,10 +1,18 @@
 .template--home--jumbotron {
-  background: linear-gradient(180deg, rgba(32, 59, 66, 1) 0%, rgba(32, 59, 66, 0) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(32, 59, 66, 1) 0%,
+    rgba(32, 59, 66, 0) 100%
+  );
 }
 
 @screen md {
   .template--home--jumbotron {
-    background: linear-gradient(90deg, rgba(32, 59, 66, 1) 0%, rgba(32, 59, 66, 0) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(32, 59, 66, 1) 0%,
+      rgba(32, 59, 66, 0) 100%
+    );
   }
 }
 
@@ -79,5 +87,23 @@
   .template--home--squiggles.position-04 {
     left: 74%;
     top: -6%;
+  }
+}
+
+.template-home--speaker img {
+  @apply inline-block;
+}
+
+.template-home--solo-speaker {
+  grid-template-columns: auto;
+
+  .speaker--image {
+    max-width: 12.5rem;
+  }
+}
+
+@screen md {
+  .template-home--solo-speaker {
+    grid-template-columns: 12.5rem auto;
   }
 }
