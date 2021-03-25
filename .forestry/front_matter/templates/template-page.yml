@@ -1,0 +1,78 @@
+---
+label: "[Template] Page"
+hide_body: true
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: layout
+  type: select
+  default: default
+  config:
+    required: true
+    options:
+    - default
+    - home
+    - about
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Layout
+- name: layout_about
+  type: field_group
+  config: {}
+  fields:
+  - name: about_page_fragment
+    type: include
+    config: {}
+    template: fragment-about-page
+    label: About Page Fragment
+  label: About Page
+  description: Content for the about page layout.
+  showOnly:
+    field: layout
+    value: about
+- name: layout_default
+  type: field_group
+  config: {}
+  fields:
+  - name: default_page_fragment
+    type: include
+    config: {}
+    template: fragment-default-page
+    label: Default Page Fragment
+  label: Default Page
+  description: Content for the default page layout.
+  showOnly:
+    field: layout
+    value: default
+- name: layout_home
+  type: field_group
+  config: {}
+  fields:
+  - name: home_page_fragment
+    type: include
+    config: {}
+    template: fragment-home-page
+    label: Home Page Fragment
+  label: Home Page
+  description: Content for the home page layout.
+  showOnly:
+    field: layout
+    value: home
+- name: seo
+  type: field_group
+  config: {}
+  fields:
+  - name: seo
+    type: include
+    config: {}
+    template: fragment-seo
+    label: SEO
+  label: SEO
+  description: While there are sensible defaults, the SEO section provides the option
+    to explicitly set meta tag values.

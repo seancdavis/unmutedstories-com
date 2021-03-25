@@ -1,0 +1,160 @@
+{% include "layout/head.njk" %}
+
+{# --- Jumbotron --- #}
+
+<div class="bg-transparent text-white relative template--home--jumbotron">
+  <div class="template--home--jumbotron-bg is-mobile md:hidden" style="background-image: url({{ home_bg.mobile }})"></div>
+  <div class="template--home--jumbotron-bg is-desktop" style="background-image: url({{ home_bg.desktop }})"></div>
+  <div class="container pt-8 pb-16">
+    <div class="flex items-center mb-4 md:mb-12">
+      <span class="inline-block w-32 mr-8">
+        {% svg "unmute-logo" %}
+      </span>
+      <span class="max-w-xs text-sm hidden md:inline-block">
+        An event-driven community for underrepresented folx to share, listen, and learn.
+      </span>
+    </div>
+    <div class="text-center md:text-left mb-32 md:mb-0">
+      <h1 class="text-4xl sm:text-5xl leading-tight mb-6">
+        Everyone has a story.
+        <br>
+        <span class="relative">
+          <span class="relative z-10">Unmute</span>
+          <span class="absolute" style="left: -2.5rem; bottom: -.33rem; height: 4rem; z-index: 0;">
+            {% svg "unmute-highlight-left" %}
+          </span>
+          <span class="absolute w-full left-0" style="bottom: -.33rem; z-index: 0;">
+            {% svg "unmute-highlight-bottom" %}
+          </span>
+        </span>
+        yours.
+      </h1>
+      <p class="max-w-md mb-8 mx-auto md:mx-0">
+        Join us for an evening of storytelling with some of your favorite fellow nerds. We'll laugh, we'll cry. We may even hear a story without any industry jargon!
+      </p>
+    </div>
+    {% set next_event = collections.events[0] %}
+    <div class="flex flex-wrap justify-center md:justify-start items-center font-bold">
+      <span class="inline-block mr-3">{{ next_event.data.date | formatDate('DATE_MED') }}</span>
+      <span class="inline-block mx-3">{{ next_event.data.time }}</span>
+      <span class="inline-block mx-3">{{ next_event.data.location }}</span>
+      <span class="inline-block mx-3">{{ next_event.data.cost }}</span>
+      <span class="block md:inline-block w-full md:w-auto mt-4 md:mt-0 ml-0 md:ml-3 text-center">
+        {% button label="Register now", url= next_event.url + "#register" %}
+      </span>
+    </div>
+  </div>
+</div>
+
+{# --- Lineup --- #}
+
+<div class="py-16 pb-8 lg:pb-16 overflow-x-hidden">
+  <div class="container text-center">
+    <h2 class="text-4xl mb-4">{{ next_event.data.title }}</h2>
+    <div class="max-w-lg mx-auto mb-4">
+      {% markdown %}{{ next_event.data.snippet }}{% endmarkdown %}
+    </div>
+    <div class="max-w-lg mx-auto mb-8">
+      {% button label="View Details", url=next_event.url, theme="outline" %}
+    </div>
+    <div class="relative">
+      <span class="absolute template--home--squiggles position-01">
+        {% svg "squiggles-01" %}
+      </span>
+      <span class="absolute template--home--squiggles position-02">
+        {% svg "squiggles-02" %}
+      </span>
+      <span class="absolute template--home--squiggles position-03">
+        {% svg "squiggles-03" %}
+      </span>
+      <span class="absolute template--home--squiggles position-04">
+        {% svg "squiggles-03" %}
+      </span>
+
+
+      {% if next_event.data.speakers.length > 1 %}
+        <h3 class="text-3xl mt-8 mb-4">
+          Featured Speaker{% if next_event.data.speakers.length > 1 %}s{% endif %}
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-{{ next_event.data.speakers.length }}">
+          {% for speaker in next_event.data.speakers %}
+            {% speaker_card
+                image=speaker.image,
+                name=speaker.title,
+                job_title=speaker.job_title,
+                company=speaker.company,
+                social=speaker.social,
+                className="mx-4 mb-8 lg:mb-0 template-home--speaker"
+            %}
+          {% endfor %}
+        </div>
+      {% else %}
+        {% for speaker in next_event.data.speakers %}
+          <div class="template-home--solo-speaker grid gap-4 md:gap-8 max-w-4xl mt-12 text-left mx-auto">
+            <div class="text-center speaker--image mx-auto">
+              {% speaker_card
+                    image=speaker.image,
+                    name=speaker.title,
+                    job_title=speaker.job_title,
+                    company=speaker.company,
+                    social=speaker.social
+              %}
+            </div>
+            <div>
+              {% markdown %}{{ speaker.body }}{% endmarkdown %}
+            </div>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{# --- About --- #}
+
+<div class="bg-red mb-0 py-16">
+  <div class="container max-w-4xl text-white text-xl md:text-2xl font-headings">
+    <p class="mb-0">
+      {{ layout_home.about.body }}
+    </p>
+  </div>
+</div>
+
+{# --- FAQ --- #}
+
+<div class="py-16 bg-gray-light">
+  <div class="container text-center">
+    <h2 class="text-4xl mb-4">{{ layout_home.faq.heading }}</h2>
+    <div class="max-w-lg mx-auto mb-8">
+      {{ layout_home.faq.body | safe }}
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        {% for question in layout_home.faq.questions %}
+          {% text_tile className="swiper-slide", heading=question.heading %}
+            {% markdown %}{{ question.body }}{% endmarkdown %}
+          {% endtext_tile %}
+        {% endfor %}
+      </div>
+      <button class="swiper-prev-button">
+        {% icon name="arrow-left" %}
+      </button>
+      <button class="swiper-next-button">
+        {% icon name="arrow-right" %}
+      </button>
+    </div>
+  </div>
+
+  <script>
+    onInit(function() {
+      App.TextTileSlider.init()
+    })
+  </script>
+</div>
+
+{% include "layout/footer.njk" %}
+
+{% include "layout/foot.njk" %}

@@ -1,0 +1,42 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: ''
+webhook_url: 
+sections:
+- type: directory
+  path: src
+  label: Pages
+  create: all
+  match: "**/*.md"
+  exclude: events/**/*
+  new_doc_ext: app
+  templates:
+  - template-page
+- type: directory
+  path: src/events
+  label: Events
+  create: documents
+  match: "**/*.md"
+  templates:
+  - template-event
+- type: heading
+  label: Config
+- type: document
+  path: src/_data/seo_defaults.json
+  label: SEO Defaults
+upload_dir: website/uploads
+public_path: "/website/uploads"
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ":filename:"
+build:
+  preview_env:
+  - NODE_ENV=development
+  - ELEVENTY_ENV=development
+  preview_output_directory: dist
+  install_dependencies_command: npm install
+  preview_docker_image: forestryio/node:12
+  mount_path: "/srv"
+  working_dir: "/srv"
+  instant_preview_command: npm run develop

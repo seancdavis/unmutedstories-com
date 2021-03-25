@@ -9,11 +9,17 @@ module.exports = {
       colors: {
         black: "var(--color-black)",
         blue: "var(--color-blue)",
-        gray: "var(--color-gray)",
+        gray: {
+          default: "var(--color-gray)",
+          light: "var(--color-gray-light)"
+        },
         orange: "var(--color-orange)",
         red: "var(--color-red)",
         white: "var(--color-white)",
-        yellow: "var(--color-yellow)"
+        yellow: {
+          default: "var(--color-yellow)",
+          dark: "var(--color-yellow-dark)"
+        }
       }
     },
     fontFamily: {

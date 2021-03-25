@@ -1,7 +1,8 @@
-import main from "./main"
+import main, { TextTileSlider } from "./main"
 
 describe("main.js", () => {
-  it("doesn't really do anything", () => {
-    expect(main).toEqual({})
+  it("exports the slider", () => {
+    expect(main).toEqual(undefined)
+    expect(typeof TextTileSlider).toEqual("function")
   })
 })

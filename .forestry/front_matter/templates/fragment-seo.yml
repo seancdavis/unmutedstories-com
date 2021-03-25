@@ -1,0 +1,93 @@
+---
+label: "[Fragment] SEO"
+hide_body: true
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+  description: The title tag of the page and the default meta title.
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Description
+- name: image_src
+  type: file
+  config:
+    maxSize: 64
+  label: Image
+  description: The meta image. If left blank, the page will try to find an intelligent
+    default.
+- name: og
+  type: field_group
+  config: {}
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: description
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Description
+  - name: image_src
+    type: file
+    config:
+      maxSize: 64
+    label: Image
+  label: Open Graph
+  description: Open Graph tags are used by Facebook and many other services to add
+    preview content when the URL is shared. These fields are for customizing these
+    fields specifically for OpenGraph tags. Otherwise, they fall back to the main
+    meta tags.
+- name: twitter
+  type: field_group
+  config: {}
+  fields:
+  - name: card
+    type: select
+    default: ''
+    config:
+      required: false
+      options: []
+      source:
+        type: documents
+        section: config
+        file: src/content/admin/references.md
+        path: twitter_cards
+    label: Card Type
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: description
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Description
+  - name: image_src
+    type: file
+    config:
+      maxSize: 64
+    label: Image
+  label: Twitter
+  description: Twitter tags are used by ... well, Twitter. They add preview content
+    when the URL is shared. These fields are for customizing these fields specifically
+    for OpenGraph tags. Otherwise, they fall back to the main meta tags.

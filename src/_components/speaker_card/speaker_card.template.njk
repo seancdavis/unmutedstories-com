@@ -1,0 +1,53 @@
+<div class="{{ className }}">
+  <span class="block mb-2">
+    {{ image | safe }}
+  </span>
+  <strong class="block mb-2 text-lg">{{ name }}</strong>
+  <span class="block text-sm">
+    <em>{{ job_title }}</em>
+  </span>
+  <span class="block text-sm">
+    {{ company }}
+  </span>
+
+  {% if social_links.website or social_links.twitter or social_links.instagram or social_links.facebook %}
+    <div class="flex items-center justify-center mt-4">
+      {% if social_links.website %}
+        <a
+          href="{{ social_links.website.url }}"
+          target="_blank"
+          class="mx-1 hover:opacity-75 transition-all duration-300"
+        >
+          {{ social_links.website.icon | safe }}
+        </a>
+      {% endif %}
+      {% if social_links.twitter %}
+        <a
+          href="{{ social_links.twitter.url }}"
+          target="_blank"
+          class="mx-1 hover:opacity-75 transition-all duration-300"
+        >
+          {{ social_links.twitter.icon | safe }}
+        </a>
+      {% endif %}
+      {% if social_links.instagram %}
+        <a
+          href="{{ social_links.instagram.url }}"
+          target="_blank"
+          class="mx-1 hover:opacity-75 transition-all duration-300"
+        >
+          {{ social_links.instagram.icon | safe }}
+        </a>
+      {% endif %}
+      {% if social_links.facebook %}
+        <a
+          href="{{ social_links.facebook.url }}"
+          target="_blank"
+          class="mx-1 hover:opacity-75 transition-all duration-300"
+        >
+          {{ social_links.facebook.icon | safe }}
+        </a>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>

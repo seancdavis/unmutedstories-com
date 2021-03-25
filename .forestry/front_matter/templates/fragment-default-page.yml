@@ -1,0 +1,11 @@
+---
+label: "[Fragment] Default Page"
+hide_body: true
+fields:
+- type: textarea
+  name: body
+  label: body
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown

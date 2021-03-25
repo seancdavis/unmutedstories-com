@@ -1,0 +1,51 @@
+.component--team-member {
+  .grid {
+    grid-template-columns: auto;
+  }
+
+  .grid-cell-img {
+    img,
+    picture {
+      @apply block
+        mx-auto;
+
+      max-width: 12.5rem;
+    }
+  }
+
+  .grid-cell-meta {
+    /* @apply ml-16; */
+  }
+
+  .grid-cell-bio {
+    /* @apply ml-16; */
+  }
+}
+
+@screen md {
+  .component--team-member {
+    .grid {
+      grid-template-columns: 12.5rem auto;
+    }
+
+    .grid-cell-img {
+      grid-column-start: 1;
+      grid-column-end: span 1;
+      grid-row-start: 1;
+      grid-row-end: span 2;
+
+      img,
+      picture {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@screen xl {
+  .component--team-member {
+    .grid {
+      grid-template-columns: 12.5rem auto 50%;
+    }
+  }
+}

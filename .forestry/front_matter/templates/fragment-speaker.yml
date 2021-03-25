@@ -1,0 +1,59 @@
+---
+label: "[Fragment] Speaker"
+hide_body: true
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Name
+- type: file
+  name: image
+  label: Image
+- type: text
+  name: job_title
+  label: Job title
+- type: text
+  name: company
+  label: Company Name
+- name: body
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Bio
+- type: text
+  name: talk_title
+  label: Talk Title
+- name: talk_body
+  label: Talk Details
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+- name: social
+  type: field_group
+  config: {}
+  fields:
+  - name: twitter
+    type: text
+    config:
+      required: false
+    label: Twitter
+  - name: instagram
+    type: text
+    config:
+      required: false
+    label: Instagram
+  - name: facebook
+    type: text
+    config:
+      required: false
+    label: Facebook
+  label: Social

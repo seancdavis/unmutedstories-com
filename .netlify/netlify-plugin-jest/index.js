@@ -1,9 +1,9 @@
 module.exports = {
   onPreBuild: async ({ utils: { build, run } }) => {
     try {
-      await run.command("yarn test --ci")
+      await run.command("npm run test --ci");
     } catch (error) {
-      return build.failBuild(error)
+      return build.failBuild(error);
     }
-  }
-}
+  },
+};

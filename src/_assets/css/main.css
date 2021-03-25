@@ -1,5 +1,9 @@
+@import "../../../node_modules/swiper/swiper-bundle.css";
+
 @import "./global/variables.css";
 @import "./global/fonts.css";
+@import "./global/images.css";
+@import "./global/swiper-overrides.css";
 
 @import "./tailwind/base";
 
@@ -9,3 +13,5 @@
 
 @import "./tailwind/components";
 @import "./tailwind/utilities";
+
+@import-glob "./templates/**/*.css";

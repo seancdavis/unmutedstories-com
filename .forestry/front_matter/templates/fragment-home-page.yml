@@ -1,0 +1,49 @@
+---
+label: "[Fragment] Home Page"
+hide_body: true
+fields:
+- type: field_group
+  name: lineup
+  label: lineup
+  fields:
+  - type: text
+    name: heading
+    label: heading
+  - type: textarea
+    name: body
+    label: body
+- type: field_group
+  name: about
+  label: about
+  fields:
+  - type: textarea
+    name: body
+    label: body
+- type: field_group
+  name: faq
+  label: faq
+  fields:
+  - type: text
+    name: heading
+    label: heading
+  - type: textarea
+    name: body
+    label: body
+    config:
+      wysiwyg: false
+      schema:
+        format: markdown
+  - type: field_group_list
+    name: questions
+    label: questions
+    fields:
+    - type: text
+      name: heading
+      label: heading
+    - type: textarea
+      name: body
+      label: body
+      config:
+        wysiwyg: true
+        schema:
+          format: markdown

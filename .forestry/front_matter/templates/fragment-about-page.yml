@@ -1,0 +1,61 @@
+---
+label: "[Fragment] About Page"
+hide_body: true
+fields:
+- name: heading
+  type: text
+  config:
+    required: true
+  label: Heading
+  description: Main heading on the page.
+- type: textarea
+  name: body
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+    required: false
+  label: Body
+  description: Text below the main heading and above the people.
+- type: field_group_list
+  name: members
+  label: Members
+  fields:
+  - type: text
+    name: title
+    label: Title
+  - type: file
+    name: image
+    label: Image
+  - type: text
+    name: job_title
+    label: Job Title
+  - name: bio
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: markdown
+    label: Bio
+  - name: social
+    type: field_group
+    config: {}
+    fields:
+    - name: twitter
+      type: text
+      config:
+        required: false
+      label: Twitter
+    - name: instagram
+      type: text
+      config:
+        required: false
+      label: Instagram
+    - name: facebook
+      type: text
+      config:
+        required: false
+      label: Facebook
+    label: Social
