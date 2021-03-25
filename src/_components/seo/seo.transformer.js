@@ -13,7 +13,9 @@ module.exports = ({ path, title, image, description, overrides = {} }) => {
 
   const getTitle = (str) => title_template.replace("%s", str);
 
-  const buildUrl = (path) => {
+  const buildUrl = (path) => `${defaults.base_url}${path || ""}`;
+
+  const buildImageUrl = (path) => {
     if (nodePath.isAbsolute(path)) {
       return `${defaults.base_url}${path || ""}`;
     }
@@ -44,17 +46,17 @@ module.exports = ({ path, title, image, description, overrides = {} }) => {
 
   return {
     description: overrides.description || description || defaults.description,
-    image: buildUrl(overrides.image || image || defaults.image),
+    image: buildImageUrl(overrides.image || image || defaults.image),
     og: {
       description: ogProp("description"),
-      image: buildUrl(ogProp("image")),
+      image: buildImageUrl(ogProp("image")),
       title: getTitle(ogProp("title")),
       type: lodash.get(overrides, "og.type") || lodash.get(defaults, "og.type"),
     },
     title: getTitle(overrides.title || title || defaults.title),
     twitter: {
       description: twitterProp("description"),
-      image: buildUrl(twitterProp("image")),
+      image: buildImageUrl(twitterProp("image")),
       title: getTitle(twitterProp("title")),
       card:
         lodash.get(overrides, "twitter.card") ||
