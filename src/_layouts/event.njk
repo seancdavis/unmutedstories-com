@@ -39,7 +39,13 @@
   {# --- Speakers --- #}
 
   <div class="mb-12">
-    <h2 class="mb-4">Our storytellers</h2>
+    <h2 class="mb-4">
+      {% if speakers.length > 1 %}
+        Our Storytellers
+      {% else %}
+        Featured Storyteller
+      {% endif %}
+    </h2>
 
     {% for speaker in speakers %}
       <div class="speaker grid gap-4 md:gap-8 max-w-4xl mb-8">
@@ -53,11 +59,13 @@
           %}
         </div>
         <div>
-          <h3>{{ speaker.talk_title }}</h3>
-          <div class="mb-4">
-            {% markdown %}{{ speaker.talk_body }}{% endmarkdown %}
-          </div>
-          <h4>About {{ speaker.title | firstWord }}</h4>
+          {% if speakers.length > 1 %}
+            <h3>{{ speaker.talk_title }}</h3>
+            <div class="mb-4">
+              {% markdown %}{{ speaker.talk_body }}{% endmarkdown %}
+            </div>
+            <h4>About {{ speaker.title | firstWord }}</h4>
+          {% endif %}
           <div>
             {% markdown %}{{ speaker.body }}{% endmarkdown %}
           </div>

@@ -15,6 +15,7 @@ module.exports = ({ social = {}, image: imgSrc, ...props }) => {
     facebook: createIconLink("facebook", social.facebook),
     instagram: createIconLink("instagram", social.instagram),
     twitter: createIconLink("twitter", social.twitter),
+    website: createIconLink("website", social.website),
   };
 
   const imgComp = new Component("image", {

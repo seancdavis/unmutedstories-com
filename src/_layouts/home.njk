@@ -101,14 +101,7 @@
               %}
             </div>
             <div>
-              <h3>{{ speaker.talk_title }}</h3>
-              <div class="mb-4">
-                {% markdown %}{{ speaker.talk_body }}{% endmarkdown %}
-              </div>
-              <h4>About {{ speaker.title | firstWord }}</h4>
-              <div>
-                {% markdown %}{{ speaker.body }}{% endmarkdown %}
-              </div>
+              {% markdown %}{{ speaker.body }}{% endmarkdown %}
             </div>
           </div>
         {% endfor %}
