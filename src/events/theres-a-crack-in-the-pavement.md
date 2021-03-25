@@ -30,4 +30,8 @@ speakers:
       Lauren Celenza (she/they) is a designer, writer, and speaker, shaping technology towards more inclusion, equity, and humanity. She currently works as a Design Lead for Google Maps and is a member of the Alphabet Workers Union. She also teaches as an adjunct professor at universities across the world. Throughout her time at Google, she worked to create more equitable practices in the way maps and technology are shaped, ultimately shifting Google Maps from a technology exclusively made for cars to one made for motorbikes and public transportation.
 
       Prior to Google, she designed for a number of tech startups, nonprofits, and civic organizations, including The Gates Foundation and Citizen Schools. Her work has appeared in Forbes, The New York Times, BBC, and Quartz.
+seo:
+  title: There's a Crack in the Pavement
+  description: They say never meet your heroes. Join us April 22, 2021 to hear Lauren Celenza share her story.
+  image: website/uploads/meta--event-01--crack-in-pavement.png
 ---
