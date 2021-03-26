@@ -1,7 +1,6 @@
 const defaults = require("../../_data/seo_defaults.json");
 const ImgixClient = require("imgix-core-js");
 const lodash = require("lodash");
-const nodePath = require("path");
 require('url')
 
 const imgixClient = new ImgixClient({
