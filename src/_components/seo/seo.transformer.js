@@ -20,7 +20,6 @@ module.exports = ({ path, title, image, description, overrides = {} }) => {
   }
 
   const buildImageUrl = (path) => {
-    if (nodePath.isAbsolute(path)) return buildUrl(path)
     return imgixClient.buildURL(path, { w: 1440, auto: "format,compress" });
   };
 
