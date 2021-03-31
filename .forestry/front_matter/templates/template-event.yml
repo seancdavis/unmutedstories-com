@@ -25,7 +25,8 @@ fields:
 - name: time
   type: text
   label: Time
-  description: The time is set separately so you have more control over how it is displayed on the website.
+  description: The time is set separately so you have more control over how it is
+    displayed on the website.
 - name: location
   type: text
   config:
@@ -55,7 +56,8 @@ fields:
     schema:
       format: markdown
   label: Snippet
-  description: The snippet is a short introduction that is currently shown on the home page.
+  description: The snippet is a short introduction that is currently shown on the
+    home page.
 - name: speakers
   type: field_group_list
   fields:
