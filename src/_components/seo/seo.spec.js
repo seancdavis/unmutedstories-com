@@ -1,5 +1,22 @@
+require("url");
+const ImgixClient = require("imgix-core-js");
+
 const transform = require("./seo.transformer");
 const defaults = require("../../_data/seo_defaults.json");
+
+const imgixClient = new ImgixClient({
+  domain: process.env.IMGIX_DOMAIN,
+  secureURLToken: process.env.IMGIX_TOKEN,
+});
+
+const buildUrl = (hostname, pathname) => {
+  const url = new URL(pathname, hostname);
+  return url.href;
+};
+
+const buildImageUrl = (pathname) => {
+  return imgixClient.buildURL(pathname, { w: 1440, auto: "format,compress" });
+};
 
 describe("SEO", () => {
   it("throws an error if nothing passed", () => {
@@ -10,21 +27,21 @@ describe("SEO", () => {
     const seo = transform({});
     const expResult = {
       description: defaults.description,
-      image: `${defaults.base_url}${defaults.image}`,
+      image: buildImageUrl(defaults.image),
       og: {
         description: defaults.description,
-        image: `${defaults.base_url}${defaults.image}`,
+        image: buildImageUrl(defaults.image),
         title: defaults.title_template.replace("%s", defaults.title),
         type: defaults.og.type,
       },
       title: defaults.title_template.replace("%s", defaults.title),
       twitter: {
         description: defaults.description,
-        image: `${defaults.base_url}${defaults.image}`,
+        image: buildImageUrl(defaults.image),
         title: defaults.title_template.replace("%s", defaults.title),
         card: defaults.twitter.card,
       },
-      url: `${defaults.base_url}`,
+      url: buildUrl(defaults.base_url, ""),
     };
     expect(seo).toEqual(expResult);
   });
@@ -40,21 +57,21 @@ describe("SEO", () => {
     const seo = transform(args);
     const expResult = {
       description: description,
-      image: `${defaults.base_url}${image}`,
+      image: buildImageUrl(image),
       og: {
         description: description,
-        image: `${defaults.base_url}${image}`,
+        image: buildImageUrl(image),
         title: defaults.title_template.replace("%s", title),
         type: defaults.og.type,
       },
       title: defaults.title_template.replace("%s", title),
       twitter: {
         description: description,
-        image: `${defaults.base_url}${image}`,
+        image: buildImageUrl(image),
         title: defaults.title_template.replace("%s", title),
         card: defaults.twitter.card,
       },
-      url: `${defaults.base_url}${path}`,
+      url: buildUrl(defaults.base_url, path),
     };
     expect(seo).toEqual(expResult);
   });
@@ -72,25 +89,25 @@ describe("SEO", () => {
       image: "/hello-world.jpg",
       path: "/hello-world", // path can't be overridden
     };
-    const { title, description, image, path } = overrides;
+    const { title, description, image } = overrides;
     const seo = transform({ ...page, overrides: overrides });
     const expResult = {
       description: description,
-      image: `${defaults.base_url}${image}`,
+      image: buildImageUrl(image),
       og: {
         description: description,
-        image: `${defaults.base_url}${image}`,
+        image: buildImageUrl(image),
         title: defaults.title_template.replace("%s", title),
         type: defaults.og.type,
       },
       title: defaults.title_template.replace("%s", title),
       twitter: {
         description: description,
-        image: `${defaults.base_url}${image}`,
+        image: buildImageUrl(image),
         title: defaults.title_template.replace("%s", title),
         card: defaults.twitter.card,
       },
-      url: `${defaults.base_url}${page.path}`,
+      url: buildUrl(defaults.base_url, page.path),
     };
     expect(seo).toEqual(expResult);
   });
@@ -105,21 +122,21 @@ describe("SEO", () => {
     const seo = transform({ overrides: { og: og } });
     const expResult = {
       description: defaults.description,
-      image: `${defaults.base_url}${defaults.image}`,
+      image: buildImageUrl(defaults.image),
       og: {
         description: og.description,
-        image: `${defaults.base_url}${og.image}`,
+        image: buildImageUrl(og.image),
         title: defaults.title_template.replace("%s", og.title),
         type: og.type,
       },
       title: defaults.title_template.replace("%s", defaults.title),
       twitter: {
         description: og.description,
-        image: `${defaults.base_url}${og.image}`,
+        image: buildImageUrl(og.image),
         title: defaults.title_template.replace("%s", og.title),
         card: defaults.twitter.card,
       },
-      url: `${defaults.base_url}`,
+      url: buildUrl(defaults.base_url, ""),
     };
     expect(seo).toEqual(expResult);
   });
@@ -134,21 +151,21 @@ describe("SEO", () => {
     const seo = transform({ overrides: { twitter: twitter } });
     const expResult = {
       description: defaults.description,
-      image: `${defaults.base_url}${defaults.image}`,
+      image: buildImageUrl(defaults.image),
       og: {
         description: defaults.description,
-        image: `${defaults.base_url}${defaults.image}`,
+        image: buildImageUrl(defaults.image),
         title: defaults.title_template.replace("%s", defaults.title),
         type: defaults.og.type,
       },
       title: defaults.title_template.replace("%s", defaults.title),
       twitter: {
         description: twitter.description,
-        image: `${defaults.base_url}${twitter.image}`,
+        image: buildImageUrl(twitter.image),
         title: defaults.title_template.replace("%s", twitter.title),
         card: twitter.card,
       },
-      url: `${defaults.base_url}`,
+      url: buildUrl(defaults.base_url, ""),
     };
     expect(seo).toEqual(expResult);
   });

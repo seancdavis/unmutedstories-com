@@ -2,7 +2,7 @@
 layout: home
 title: Home Page
 seo:
-  image: "/assets/images/meta/unmute--meta--home.png"
+  image: "website/uploads/meta--unmute-home.png"
   description: Everyone has a story. Unmute yours.
   title: Unmute Your Story
 layout_home:

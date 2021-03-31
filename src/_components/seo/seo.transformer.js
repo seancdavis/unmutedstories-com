@@ -1,7 +1,7 @@
 const defaults = require("../../_data/seo_defaults.json");
 const ImgixClient = require("imgix-core-js");
 const lodash = require("lodash");
-const nodePath = require("path");
+require('url')
 
 const imgixClient = new ImgixClient({
   domain: process.env.IMGIX_DOMAIN,
@@ -13,12 +13,12 @@ module.exports = ({ path, title, image, description, overrides = {} }) => {
 
   const getTitle = (str) => title_template.replace("%s", str);
 
-  const buildUrl = (path) => `${defaults.base_url}${path || ""}`;
+  const buildUrl = (path) => {
+    const url = new URL(path || "", defaults.base_url)
+    return url.href
+  }
 
   const buildImageUrl = (path) => {
-    if (nodePath.isAbsolute(path)) {
-      return `${defaults.base_url}${path || ""}`;
-    }
     return imgixClient.buildURL(path, { w: 1440, auto: "format,compress" });
   };
 
