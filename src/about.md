@@ -32,7 +32,7 @@ layout_about:
 
       He has brought this expertise and insight to clients such as Bayer, ExxonMobil, Procter & Gamble, Mars and Bayer using enterprise platforms such as Sitecore, AEM and Drupal. Specialties include: customer experience strategy and planning, interaction design, visual design, user research and testing.
   - title: Ryan Cayabyab
-    image: "/website/uploads/member-ryan.png"
+    image: "/website/uploads/member-ryan-2.png"
     job_title: DesignOps & Senior IT Manager at Procter & Gamble
     bio: 'Chosen as one of Cincinnati Magazine''s, The Future of Cincinnati: Ones
       to Watch, UX and UI design leader Ryan Cayabyab is an award-winning designer,
