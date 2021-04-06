@@ -78,7 +78,7 @@
 
   <div class="max-w-xl" id="register">
     <h2>Register to attend this event</h2>
-    <form name="[Registration] {{ title | replace("'", '') }}" method="POST" data-netlify="true">
+    <form name="[Registration] {{ title | replace("'", '') }}" method="POST" data-netlify="true" action="/events/thank-you">
 
       <div class="mb-4">
         <label class="block mb-1" for="reg--name">Your Name</label>

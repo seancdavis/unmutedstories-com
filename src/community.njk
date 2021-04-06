@@ -1,0 +1,58 @@
+---
+title: Join the Community!
+layout: blank
+seo:
+  title: Join the Unmute Community!
+  image: website/uploads/meta--unmute-community.png
+  description: Welcome to Unmute! Come join the conversation.
+---
+
+{% include "layout/header.njk" %}
+
+<main class="container py-20">
+  <div class="max-w-2xl">
+    <div class="mb-12">
+      <h1>Join the Community</h1>
+      <p>Welcome to Unmute! We'd love for you to join our community.</p>
+      <p>
+        In between (and during) <a href="/events">events</a>, we chat on Slack.
+        Fill in the form below and we will send you an invitation to our Slack
+        team.
+      </p>
+    </div>
+
+    <div>
+      <h2>Join the Unmute Slack</h2>
+      <form name="New Community Member" method="POST" data-netlify="true" action="/community/thank-you">
+        <div class="mb-4">
+          <label class="block mb-1" for="commmunity--email">Your Email</label>
+          <input class="rounded-md h-12 px-4 py-2 block w-full border" type="email" name="email" id="commmunity--email" required>
+        </div>
+        <div class="mb-4">
+          <div class="flex">
+            <input class="rounded-md h-6 mr-2 inline-block border" type="checkbox" name="opt_in" id="commmunity--newsletter" checked>
+            <label class="" for="commmunity--newsletter">Notify me about upcoming events</label>
+          </div>
+        </div>
+        <input
+          type="submit"
+          value="Invite Me!"
+          class="
+            bg-yellow
+            duration-300
+            inline-block
+            no-underline
+            px-8
+            py-3
+            relative
+            rounded-full
+            text-black
+            transition-all
+            component--button
+          ">
+      </form>
+    </div>
+  </div>
+</main>
+
+{% include "layout/footer.njk" %}
