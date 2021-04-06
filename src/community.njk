@@ -25,8 +25,14 @@ seo:
       <h2>Join the Unmute Slack</h2>
       <form name="New Community Member" method="POST" data-netlify="true" action="/community/thank-you">
         <div class="mb-4">
-          <label class="block mb-1" for="reg--email">Your Email</label>
-          <input class="rounded-md h-12 px-4 py-2 block w-full border" type="email" name="email" id="reg--email" required>
+          <label class="block mb-1" for="commmunity--email">Your Email</label>
+          <input class="rounded-md h-12 px-4 py-2 block w-full border" type="email" name="email" id="commmunity--email" required>
+        </div>
+        <div class="mb-4">
+          <div class="flex">
+            <input class="rounded-md h-6 mr-2 inline-block border" type="checkbox" name="opt_in" id="commmunity--newsletter" checked>
+            <label class="" for="commmunity--newsletter">Notify me about upcoming events</label>
+          </div>
         </div>
         <input
           type="submit"
