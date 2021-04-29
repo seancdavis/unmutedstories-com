@@ -33,16 +33,18 @@
         Join us for an evening of storytelling with some of your favorite fellow nerds. We'll laugh, we'll cry. We may even hear a story without any industry jargon!
       </p>
     </div>
-    {% set next_event = collections.events[0] %}
-    <div class="flex flex-wrap justify-center md:justify-start items-center font-bold">
-      <span class="inline-block mr-3">{{ next_event.data.date | formatDate('DATE_MED') }}</span>
-      <span class="inline-block mx-3">{{ next_event.data.time }}</span>
-      <span class="inline-block mx-3">{{ next_event.data.location }}</span>
-      <span class="inline-block mx-3">{{ next_event.data.cost }}</span>
-      <span class="block md:inline-block w-full md:w-auto mt-4 md:mt-0 ml-0 md:ml-3 text-center">
-        {% button label="Register now", url= next_event.url + "#register" %}
-      </span>
-    </div>
+    {% set next_event = collections.upcoming_events[0] %}
+    {% if next_event %}
+      <div class="flex flex-wrap justify-center md:justify-start items-center font-bold">
+        <span class="inline-block mr-3">{{ next_event.data.date | formatDate('DATE_MED') }}</span>
+        <span class="inline-block mx-3">{{ next_event.data.time }}</span>
+        <span class="inline-block mx-3">{{ next_event.data.location }}</span>
+        <span class="inline-block mx-3">{{ next_event.data.cost }}</span>
+        <span class="block md:inline-block w-full md:w-auto mt-4 md:mt-0 ml-0 md:ml-3 text-center">
+          {% button label="Register now", url= next_event.url + "#register" %}
+        </span>
+      </div>
+    {% endif %}
   </div>
 </div>
 
@@ -50,64 +52,73 @@
 
 <div class="py-16 pb-8 lg:pb-16 overflow-x-hidden">
   <div class="container text-center">
-    <span class="inline-block py-1 px-2 bg-gray-light rounded-md text-xs mb-2">Next Event</span>
-    <h2 class="text-4xl mb-4">{{ next_event.data.title }}</h2>
-    <div class="max-w-lg mx-auto mb-4">
-      {% markdown %}{{ next_event.data.snippet }}{% endmarkdown %}
-    </div>
-    <div class="max-w-lg mx-auto mb-8">
-      {% button label="View Details", url=next_event.url, theme="outline" %}
-    </div>
-    <div class="relative">
-      <span class="absolute template--home--squiggles position-01">
-        {% svg "squiggles-01" %}
-      </span>
-      <span class="absolute template--home--squiggles position-02">
-        {% svg "squiggles-02" %}
-      </span>
-      <span class="absolute template--home--squiggles position-03">
-        {% svg "squiggles-03" %}
-      </span>
-      <span class="absolute template--home--squiggles position-04">
-        {% svg "squiggles-03" %}
-      </span>
+    {% if next_event %}
+      <span class="inline-block py-1 px-2 bg-gray-light rounded-md text-xs mb-2">Next Event</span>
+      <h2 class="text-4xl mb-4">{{ next_event.data.title }}</h2>
+      <div class="max-w-lg mx-auto mb-4">
+        {% markdown %}{{ next_event.data.snippet }}{% endmarkdown %}
+      </div>
+      <div class="max-w-lg mx-auto mb-8">
+        {% button label="View Details", url=next_event.url, theme="outline" %}
+      </div>
+      <div class="relative">
+        <span class="absolute template--home--squiggles position-01">
+          {% svg "squiggles-01" %}
+        </span>
+        <span class="absolute template--home--squiggles position-02">
+          {% svg "squiggles-02" %}
+        </span>
+        <span class="absolute template--home--squiggles position-03">
+          {% svg "squiggles-03" %}
+        </span>
+        <span class="absolute template--home--squiggles position-04">
+          {% svg "squiggles-03" %}
+        </span>
 
 
-      {% if next_event.data.speakers.length > 1 %}
-        <h3 class="text-3xl mt-8 mb-4">
-          Featured Speaker{% if next_event.data.speakers.length > 1 %}s{% endif %}
-        </h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-{{ next_event.data.speakers.length }}">
-          {% for speaker in next_event.data.speakers %}
-            {% speaker_card
-                image=speaker.image,
-                name=speaker.title,
-                job_title=speaker.job_title,
-                company=speaker.company,
-                social=speaker.social,
-                className="mx-4 mb-8 lg:mb-0 template-home--speaker"
-            %}
-          {% endfor %}
-        </div>
-      {% else %}
-        {% for speaker in next_event.data.speakers %}
-          <div class="template-home--solo-speaker grid gap-4 md:gap-8 max-w-4xl mt-12 text-left mx-auto">
-            <div class="text-center speaker--image mx-auto">
+        {% if next_event.data.speakers.length > 1 %}
+          <h3 class="text-3xl mt-8 mb-4">
+            Featured Speaker{% if next_event.data.speakers.length > 1 %}s{% endif %}
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-{{ next_event.data.speakers.length }}">
+            {% for speaker in next_event.data.speakers %}
               {% speaker_card
-                    image=speaker.image,
-                    name=speaker.title,
-                    job_title=speaker.job_title,
-                    company=speaker.company,
-                    social=speaker.social
+                  image=speaker.image,
+                  name=speaker.title,
+                  job_title=speaker.job_title,
+                  company=speaker.company,
+                  social=speaker.social,
+                  className="mx-4 mb-8 lg:mb-0 template-home--speaker"
               %}
-            </div>
-            <div>
-              {% markdown %}{{ speaker.body }}{% endmarkdown %}
-            </div>
+            {% endfor %}
           </div>
-        {% endfor %}
-      {% endif %}
-    </div>
+        {% else %}
+          {% for speaker in next_event.data.speakers %}
+            <div class="template-home--solo-speaker grid gap-4 md:gap-8 max-w-4xl mt-12 text-left mx-auto">
+              <div class="text-center speaker--image mx-auto">
+                {% speaker_card
+                      image=speaker.image,
+                      name=speaker.title,
+                      job_title=speaker.job_title,
+                      company=speaker.company,
+                      social=speaker.social
+                %}
+              </div>
+              <div>
+                {% markdown %}{{ speaker.body }}{% endmarkdown %}
+              </div>
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+    {% else %}
+      <p class="text-lg italic">
+        There are no upcoming events at this time.
+      </p>
+      <p class="text-lg italic">
+        <a href="/community">Join the community</a> to receive new event updates.
+      </p>
+    {% endif %}
   </div>
 </div>
 
