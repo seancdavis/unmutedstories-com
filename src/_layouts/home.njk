@@ -112,6 +112,7 @@
         {% endif %}
       </div>
     {% else %}
+      {% set last_event = collections.shareable_past_events[0] %}
       <div class="relative">
         <span class="absolute template--home--squiggles position-05">
           {% svg "squiggles-01" %}
@@ -123,22 +124,21 @@
         <div class="max-w-2xl mx-auto">
           <h2 class="text-2xl sm:text-4xl max-w-xl mx-auto mb-4">Stay tuned. We're currently planning our next event</h2>
           <p class="text-sm sm:text-lg mb-8">
-            In the meantime, watch April's talk with Lauren Celenza,
-            <em>There's a Crack in the Pavement</em>.
+            In the meantime, here is a video from a recent event:
+            <a href="{{ last_event.url }}"><em>{{ last_event.data.title }}</em></a>.
           </p>
 
           <div class="h-0 overflow-hidden relative" style="padding-bottom: 56.25%">
             <iframe
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/PzqNBsxDIoU"
+              src="https://www.youtube.com/embed/{{ last_event.data.youtube_id }}"
               class="absolute h-full left-0 top-0 w-full"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
-            </div>
-
+          </div>
         </div>
       </div>
     {% endif %}

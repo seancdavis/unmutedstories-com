@@ -29,4 +29,12 @@ exports.default = (eleventyConfig) => {
       .filter((event) => event.date >= Date.now())
       .reverse();
   });
+  /**
+   * Events that have already occurred who have videos.
+   */
+  eleventyConfig.addCollection("shareable_past_events", (collectionApi) => {
+    return getAllEvents(collectionApi).filter(
+      (event) => event.date < Date.now() && event.data.youtube_id
+    );
+  });
 };

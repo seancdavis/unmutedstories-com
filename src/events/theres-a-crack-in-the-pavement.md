@@ -15,6 +15,7 @@ snippet: |-
 
   Controversial for its geographic inaccuracies but lauded for its modern simplicity, the 1972 New York City Subway Map, designed by Massimo Vignelli, was both a work of art and an inaccurate representation of the city. Lauren's story is a reflection of how often art represents its creator.
 layout: event
+youtube_id: PzqNBsxDIoU
 speakers:
 - image: "/website/uploads/speaker-lauren-celenza.png"
   job_title: Design Lead
