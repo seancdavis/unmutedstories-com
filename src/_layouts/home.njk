@@ -30,7 +30,7 @@
         yours.
       </h1>
       <p class="max-w-md mb-8 mx-auto md:mx-0">
-        Join us for an evening of storytelling with some of your favorite fellow nerds. We'll laugh, we'll cry. We may even hear a story without any industry jargon!
+        Join our events to hear storytelling by some of your favorite fellow nerds. We'll laugh. We'll cry. We may even hear a story without any industry jargon.
       </p>
     </div>
     {% set next_event = collections.upcoming_events[0] %}
@@ -48,7 +48,7 @@
   </div>
 </div>
 
-{# --- Lineup --- #}
+{# --- Next Event --- #}
 
 <div class="py-16 pb-8 lg:pb-16 overflow-x-hidden">
   <div class="container text-center">
@@ -112,12 +112,35 @@
         {% endif %}
       </div>
     {% else %}
-      <p class="text-lg italic">
-        There are no upcoming events at this time.
-      </p>
-      <p class="text-lg italic">
-        <a href="/community">Join the community</a> to receive new event updates.
-      </p>
+      <div class="relative">
+        <span class="absolute template--home--squiggles position-05">
+          {% svg "squiggles-01" %}
+        </span>
+        <span class="absolute template--home--squiggles position-06">
+          {% svg "squiggles-02" %}
+        </span>
+
+        <div class="max-w-2xl mx-auto">
+          <h2 class="text-2xl sm:text-4xl max-w-xl mx-auto mb-4">Stay tuned. We're currently planning our next event</h2>
+          <p class="text-sm sm:text-lg mb-8">
+            In the meantime, watch April's talk with Lauren Celenza,
+            <em>There's a Crack in the Pavement</em>.
+          </p>
+
+          <div class="h-0 overflow-hidden relative" style="padding-bottom: 56.25%">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/PzqNBsxDIoU"
+              class="absolute h-full left-0 top-0 w-full"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+            </div>
+
+        </div>
+      </div>
     {% endif %}
   </div>
 </div>
