@@ -58,6 +58,10 @@ fields:
   label: Snippet
   description: The snippet is a short introduction that is currently shown on the
     home page.
+- name: youtube_id
+  type: text
+  label: YouTube ID
+  description: The ID of the video. Videos are recordings of the event and uploaded after the event. You can grab the ID from the URL.
 - name: speakers
   type: field_group_list
   fields:

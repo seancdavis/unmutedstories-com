@@ -8,33 +8,60 @@
   {# --- Details --- #}
 
   <ul class="pl-0 mb-6">
-    <li class="list-none mb-1">
-      <strong>Date:</strong>
-      <span>{{ date | formatDate('DATE_MED') }}</span>
-    </li>
-    <li class="list-none mb-1">
-      <strong>Time:</strong>
-      <span>{{ time }}</span>
-    </li>
-    <li class="list-none mb-1">
-      <strong>Location:</strong>
-      <span>{{ location }}</span>
-    </li>
-    <li class="list-none mb-1">
-      <strong>Cost:</strong>
-      <span>{{ cost }}</span>
-    </li>
-    <li class="list-none mb-0">
-      <strong>Register:</strong>
-      <a href="#register">Register below</a>
-    </li>
+    {% if date | isFuture %}
+      <li class="list-none mb-1">
+        <strong>Date:</strong>
+        <span>{{ date | formatDate('DATE_MED') }}</span>
+      </li>
+      <li class="list-none mb-1">
+        <strong>Time:</strong>
+        <span>{{ time }}</span>
+      </li>
+      <li class="list-none mb-1">
+        <strong>Location:</strong>
+        <span>{{ location }}</span>
+      </li>
+      <li class="list-none mb-1">
+        <strong>Cost:</strong>
+        <span>{{ cost }}</span>
+      </li>
+      <li class="list-none mb-0">
+        <strong>Register:</strong>
+        <a href="#register">Register below</a>
+      </li>
+    {% else %}
+      <li class="list-none mb-1">
+        <strong>Date:</strong>
+        <span>{{ date | formatDate('DATE_MED') }}</span> (Past Event)
+      </li>
+    {% endif %}
   </ul>
 
-  {# --- Event Description --- #}
 
   <div class="max-w-2xl mb-12">
+    {# --- Event Description --- #}
+
     {% markdown %}{{ body | safe }}{% endmarkdown %}
+
+    {# --- Video --- #}
+
+    {% if youtube_id %}
+      <div class="max-w-xl">
+        <div class="h-0 overflow-hidden relative" style="padding-bottom: 56.25%">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/{{ youtube_id }}"
+            class="absolute h-full left-0 top-0 w-full"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    {% endif %}
   </div>
+
 
   {# --- Speakers --- #}
 
@@ -76,38 +103,40 @@
 
   {# --- Registration Form --- #}
 
-  <div class="max-w-xl" id="register">
-    <h2>Register to attend this event</h2>
-    <form name="[Registration] {{ title | replace("'", '') }}" method="POST" data-netlify="true" action="/events/thank-you">
+  {% if date | isFuture %}
+    <div class="max-w-xl" id="register">
+      <h2>Register to attend this event</h2>
+      <form name="[Registration] {{ title | replace(`'`, '') }}" method="POST" data-netlify="true" action="/events/thank-you">
 
-      <div class="mb-4">
-        <label class="block mb-1" for="reg--name">Your Name</label>
-        <input class="rounded-md h-12 px-4 py-2 block w-full border" type="text" name="name" id="reg--name" required>
-      </div>
+        <div class="mb-4">
+          <label class="block mb-1" for="reg--name">Your Name</label>
+          <input class="rounded-md h-12 px-4 py-2 block w-full border" type="text" name="name" id="reg--name" required>
+        </div>
 
-      <div class="mb-4">
-        <label class="block mb-1" for="reg--email">Your Email</label>
-        <input class="rounded-md h-12 px-4 py-2 block w-full border" type="email" name="email" id="reg--email" required>
-      </div>
+        <div class="mb-4">
+          <label class="block mb-1" for="reg--email">Your Email</label>
+          <input class="rounded-md h-12 px-4 py-2 block w-full border" type="email" name="email" id="reg--email" required>
+        </div>
 
-    <input
-      type="submit"
-      value="Register!"
-      class="
-        bg-yellow
-        duration-300
-        inline-block
-        no-underline
-        px-8
-        py-3
-        relative
-        rounded-full
-        text-black
-        transition-all
-        component--button
-      ">
-    </form>
-  </div>
+      <input
+        type="submit"
+        value="Register!"
+        class="
+          bg-yellow
+          duration-300
+          inline-block
+          no-underline
+          px-8
+          py-3
+          relative
+          rounded-full
+          text-black
+          transition-all
+          component--button
+        ">
+      </form>
+    </div>
+  {% endif %}
 </main>
 
 {% include "layout/footer.njk" %}
